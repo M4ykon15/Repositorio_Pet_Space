@@ -12,7 +12,7 @@
 .container-E{
     width: 50%;
     max-width: 50%;
-    background-image: url('/Imagens/cadastro1.png');
+    background-image: url('../Imagens/cadastro1.png');
     background-size: cover;
     background-position: 5vh 0vw;
     justify-content: center;

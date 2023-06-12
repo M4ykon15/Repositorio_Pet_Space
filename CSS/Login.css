@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url("/Imagens/dog_17.jpg");
+  background-image: url("../Imagens/dog_17.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed

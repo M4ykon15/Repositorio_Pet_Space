@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+
+.principal{
+
+    height: 100vh;
+    display: flex;
+}
+
+.container-E{
+    width: 50%;
+    max-width: 50%;
+    background-image: url('/Imagens/cadastro1.png');
+    background-size: cover;
+    background-position: 5vh 0vw;
+    justify-content: center;
+}
+
+.container-D{
+
+    width: 50%;
+    max-width: 50%;
+    background-color: #397025;
+   
+}
+
+.eyeSvg{
+    position: absolute;
+    top: 23px;
+    right: 10px;
+    cursor: pointer;
+    color: #000000;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+
+  .card {
+    background-color: #ffffff80;
+    padding: 20px;
+    border-radius: 9%;
+    box-shadow: 3px 3px 1px 0px #000000;
+    width: 400px;
+    height: 590px;
+    margin-top: 10%;
+    margin-left: 25%;
+  }
+  
+  h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000
+  }
+  
+  .label-float input{
+    width: 100%;
+    padding: 0px 50px 0px 15px;
+    display: inline-block;
+    border: 2px;
+    border-bottom: 2px solid #000000;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    border-radius: 22px;
+    
+    
+  }
+  
+  .label-float{
+    position: relative;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .label-float input:focus{
+    border-bottom: 2px solid #ffffff;
+  }
+  
+  .label-float label{
+    color: #ffffff;
+    pointer-event: none;
+    position: absolute;
+    top: -12px;
+    left: 0px;
+    transition: all .3s ease-out;
+    margin-top: 13px;
+    
+  }
+  
+  .label-float input:focus + label,
+  .label-float input:valid + label{
+    font-size: 17px;
+    margin-top: 0px;
+    color: #ffffff
+  }
+  
+  button{
+    background-color: transparent;
+    border-color: #010101ab;
+    color: rgb(255, 255, 255);
+    padding: 7px;
+    font-weight: bold;
+    font-size: 12pt;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+  }
+  
+  button:hover{
+    background-color: #349c00ab;
+    color: #fff;
+  }
+  
+  .justify-center{
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  hr{
+    margin-top: 15px;
+    margin-bottom: -50px;
+    width: 60%;
+  }
+ 
+  
+  #msgError{
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+  }
+  
+  #msgSuccess{
+    text-align: center;
+    color: #00bb00;
+    background-color: #bbffbe;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+  }
+
+  #icon{
+    size: 20px;
+  }
+
+  p{
+    color: #272262;
+    font-size: 14pt;
+    text-align: center;
+    margin-top: 35px;
+  }
+  
+  a{
+    color: #7a3077;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .3s ease-out;
+  }
+
+  a:hover{
+    color: #272262;
+  }
+
+  

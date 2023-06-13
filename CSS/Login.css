@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url("../Imagens/dog_17.jpg");
+  background-image: url("../Imagens/.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed
@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .card {

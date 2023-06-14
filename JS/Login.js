@@ -65,7 +65,6 @@ btn.addEventListener('click', ()=>{
   })
 
   
-  
   function entrar() {
     if (validEmail && validSenha) {
       if (email.value.trim() === '' || email.value.trim() !== 'admin@gmail.com') {
@@ -94,3 +93,6 @@ btn.addEventListener('click', ()=>{
       return false
     }
   }
+  
+  
+ 

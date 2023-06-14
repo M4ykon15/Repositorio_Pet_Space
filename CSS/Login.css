@@ -3,11 +3,11 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Century Gothic', sans-serif;
 }
 
 body {
-  background-image: url("../Imagens/.png");
+  background: linear-gradient(to right, #006400, #003300);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed
@@ -18,8 +18,24 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 200px;
+  margin-top: 135px;
+  margin-left: 50px;
+  position: fixed;
 }
+
+img{
+
+height: 65px;
+width: 65px; 
+margin-top: 20px;
+}
+
+.div_1{
+margin-left: 50px;
+margin-top: 50px;
+position: absolute;
+}
+
 
 .card {
     background-color: #ffffff80;
@@ -43,7 +59,7 @@ h1{
   background-color: transparent;
   outline: none;
   min-width: 180px;
-  font-size: 16px;
+  font-size: 18px;
   transition: all .3s ease-out;
   border-radius: 0px;
   
@@ -57,12 +73,11 @@ h1{
 }
 
 .label-float input:focus{
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid #000000;
 }
 
 .label-float label{
   color: #000000;
-  pointer-event: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -72,28 +87,40 @@ h1{
 
 .label-float input:focus + label,
 .label-float input:valid + label{
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 0;
   color: #000000
 }
 
-button{
-  background-color: transparent;
-  border-color: #060606;
-  color: #000000;
+#btn{
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
   padding: 7px;
   font-weight: bold;
   font-size: 12pt;
   margin-top: 20px;
-  border-radius: 4px;
+  border-radius: 20px 20px 20px 20px;
+  width: 100px;
   cursor: pointer;
   outline: none;
   transition: all .4s ease-out;
 }
 
-button:hover{
-    background-color: #37ff0000;
-  color: #000000;
+#btn1{
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+  padding: 7px;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-top: 20px; 
+  margin-left: 10px;
+  border-radius: 20px 20px 20px 20px;
+  width: 130px;
+  cursor: pointer;
+  outline: none;
+  transition: all .4s ease-out;
 }
 
 .justify-center{
@@ -108,20 +135,20 @@ hr{
 }
 
 p{
-  color: #272262;
+  color: #000000;
   font-size: 14pt;
   text-align: center;
 }
 
 a{
-  color: #5a64cd;
+  color: #0d740a;
   font-weight: bold;
   text-decoration: none;
   transition: all .3s ease-out;
 }
 
 a:hover{
-  color: #2313d9;
+  color:  #15ff00;
 }
 
 .fa-eye{

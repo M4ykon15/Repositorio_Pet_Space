@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Quicksand:wght@300&display=swap');
 
-
-
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Mulish', sans-serif;
+}
 
 .principal{
 
     height: 100vh;
     display: flex;
+    
 }
 
 .container-E{
@@ -16,6 +20,7 @@
     background-size: cover;
     background-position: 5vh 0vw;
     justify-content: center;
+    
 }
 
 .container-D{
@@ -23,6 +28,7 @@
     width: 50%;
     max-width: 50%;
     background-color: #397025;
+    position: relative;
    
 }
 
@@ -35,16 +41,7 @@
     width: 20px;
   }
 
-  .eyeSvg2{
-
-
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-  }
+  
   
 
   .card {
@@ -54,8 +51,9 @@
     box-shadow: 3px 3px 1px 0px #000000;
     width: 400px;
     height: 590px;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 25%;
+    position: absolute;
   }
   
   h1{
@@ -64,68 +62,86 @@
     color: #000000
   }
   
+#img1{
+
+  height: 55px;
+  width: 55px;
+  margin-top: 20px;
+  
+}
+
+.div1{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+
   .label-float input{
     width: 100%;
-    padding: 0px 50px 0px 15px;
+    padding: 5px 5px;
     display: inline-block;
-    border: 2px;
+    border: 0px;
     border-bottom: 2px solid #000000;
+    background-color: transparent;
     outline: none;
     min-width: 180px;
     font-size: 16px;
-    border-radius: 22px;
-    
+    transition: all .3s ease-out;
+    border-radius: 2px;
+    margin-top: -50px;
     
   }
   
+.letra{
+  font-size: 17px;
+}
+
+
   .label-float{
     position: relative;
     padding-top: 20px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 2px;
+   
   }
   
   .label-float input:focus{
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #000000;
   }
   
   .label-float label{
-    color: #ffffff;
-    pointer-event: none;
+    color: #000000;
     position: absolute;
-    top: -12px;
+    top: -5px;
     left: 0px;
     transition: all .3s ease-out;
-    margin-top: 13px;
+    margin-top: 12px;
     
   }
   
   .label-float input:focus + label,
   .label-float input:valid + label{
-    font-size: 17px;
-    margin-top: 0px;
-    color: #ffffff
+    font-size: 16px;
+    margin-top: 7px;
+    color: #000000
   }
   
   button{
-    background-color: transparent;
-    border-color: #010101ab;
+    background-color: #000000;
+    border-color: #000000;
     color: rgb(255, 255, 255);
     padding: 7px;
     font-weight: bold;
     font-size: 12pt;
     margin-top: 20px;
-    border-radius: 4px;
+    border-radius: 20px 20px 20px 20px;
+    width:150px;
     cursor: pointer;
     outline: none;
     transition: all .4s ease-out;
   }
   
-  button:hover{
-    background-color: #349c00ab;
-    color: #fff;
-  }
-  
+
   .justify-center{
     display: flex;
     justify-content: center;
@@ -143,9 +159,12 @@
     text-align: center;
     color: #ff0000;
     background-color: #ffbbbb;
-    padding: 10px;
+    padding: 5px;
     border-radius: 4px;
     display: none;
+    margin-top: -20px;
+    margin-bottom: -10px;
+    font-size: 15px;
   }
   
   #msgSuccess{
@@ -162,14 +181,14 @@
   }
 
   p{
-    color: #272262;
+    color: #000000;
     font-size: 14pt;
     text-align: center;
     margin-top: 35px;
   }
   
   a{
-    color: #7a3077;
+    color: #32ac2e;
     font-weight: bold;
     text-decoration: none;
     transition: all .3s ease-out;

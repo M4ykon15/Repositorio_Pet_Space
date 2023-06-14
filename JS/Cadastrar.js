@@ -134,19 +134,7 @@ confirmSenha.addEventListener('keyup', () => {
 
 function cadastrar(){
   if(validNome && validEmail && validCpf && validSenha && validConfirmSenha){
-    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
-    
-    listaUser.push(
-    {
-      nomeCad: nome.value,
-      emailCad: email.value,
-      senhaCad: senha.value
-    }
-    )
-    
-    localStorage.setItem('listaUser', JSON.stringify(listaUser))
-    
-   
+
     msgSuccess.setAttribute('style', 'display: block')
     msgSuccess.innerHTML = '<strong>Cadastrando usuário...</strong>'
     msgError.setAttribute('style', 'display: none')
@@ -160,9 +148,10 @@ function cadastrar(){
     
   } else {
     msgError.setAttribute('style', 'display: block')
-    msgError.innerHTML = '<strong>Preencha todos os campos corretamente antes de cadastrar</strong>'
+    msgError.innerHTML = '<strong> Preencha os campos obrigatórios antes de prosseguir</strong>'
     msgSuccess.innerHTML = ''
     msgSuccess.setAttribute('style', 'display: none')
+    return false;
   }
 }
 

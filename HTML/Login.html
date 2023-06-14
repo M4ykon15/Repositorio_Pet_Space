@@ -13,9 +13,18 @@
         
         <body>
         
+          <div class="div_1">
+            <a href="../HTML/PetSpace.html">
+              <img src="../Imagens/voltar.png">
+              <button id="btn1"> Voltar para o início</button>
+            </a>
+           </div>
+
         <div class='container'>
+
+        
           <div class='card'>
-            <h1> Entrar </h1>
+            <h1> LOGIN </h1>
             
             <div id='msgError'></div>
             <div id='msgSuccess'></div>
@@ -23,26 +32,26 @@
             
 
             <div class='label-float'>
-              <input type='email' id='email' name="email" required>
-              <label for='email'>Email</label>
+              <input type='text' id='email' name="email" required>
+              <label id='labelEmail' for='email'>Email</label>
             </div>
             
             <div class='label-float'>
               <input type='password' id='senha' name="senha" required>
-              <label for='senha'>Senha</label>
+              <label id='labelSenha' for='senha'>Senha</label>
 
               <i class="fa fa-eye" aria-hidden="true"></i>
             </div>
             
             <div class='justify-center'>
-              <button onclick='entrar()'>Entrar</button>
+              <button id="btn" onclick='entrar()'>Entrar</button>
             </div>
             
             <div class='justify-center'>
               <hr>
             </div>
             
-            <p> Não tem uma conta?
+            <p> Não possui uma conta?
               <a href='../HTML/Cadastrar.html'> Cadastre-se </a>
             </p>
             

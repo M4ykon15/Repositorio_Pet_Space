@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Painel de Controle</title>
+    <link rel="stylesheet" href="../CSS/ADM.css">
+</head>
+<body>
+    <h1>Bem-vindo ao Painel de Controle</h1>
+    <div id="estatisticas">
+        <h2>Estatísticas</h2>
+        <ul>
+            <li>Animais divulgados: <span id="adoptions">0</span></li>
+            <li>Solicitações pendentes: <span id="requests">0</span></li>
+            <!-- Adicione outras métricas relevantes aqui -->
+        </ul>
+    </div>
+
+    
+
+        <div style="text-align: center; background-color: snow;">
+          <h1>Animais divulgados</h1>
+        </div>
+        
+        <table class="animais_divulgados">
+          <thead>
+            <tr>
+              <th>FOTO</th>
+              <th>NOME DO RESPONSÁVEL</th>
+              <th>SEXO</th>
+              <th>ESPÉCIE</th>
+              <th>RAÇA</th>
+              <th>IDADE</th>
+              <th>PORTE</th>
+              <th>NOME DO PET</th>
+              <th>CARACTERÍSTICAS</th>
+              <th>ENDEREÇO</th>
+              <th>HISTÓRIA</th>
+              <th>AÇÕES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../Imagens/dog_5.webp" alt="Foto do animal"></td>
+              <td>João</td>
+              <td>Macho</td>
+              <td>Cachorro</td>
+              <td>Poodle</td>
+              <td>3 anos</td>
+              <td>Pequeno</td>
+              <td>Max</td>
+              <td>Docíl, Vive bem em apartamento</td>
+              <td>Rua A, 123</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>
+                <button class="edit-btn">Editar</button>
+                <button class="delete-btn">Excluir</button>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="../Imagens/cat_1.webp" alt="Foto do animal"></td>
+              <td>Maria</td>
+              <td>Fêmea</td>
+              <td>Gato</td>
+              <td>Siamês</td>
+              <td>2 anos</td>
+              <td>Pequeno</td>
+              <td>Luna</td>
+              <td>Brincalhão, Sociável</td>
+              <td>Rua B, 456</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>
+                <button class="edit-btn">Editar</button>
+                <button class="delete-btn">Excluir</button>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="../Imagens/dog_6.webp" alt="Foto do animal"></td>
+              <td>Carlos</td>
+              <td>Macho</td>
+              <td>Cachorro</td>
+              <td>Labrador</td>
+              <td>1 ano</td>
+              <td>Grande</td>
+              <td>Bobby</td>
+              <td>Calmo, Gosta de crianças</td>
+              <td>Rua C, 789</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>
+                <button class="edit-btn">Editar</button>
+                <button class="delete-btn">Excluir</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div style="text-align: center; background-color: snow;">
+          <h1>Solicitações pendentes</h1>
+        </div>
+        
+        <table class="animais_pendentes">
+          <thead>
+            <tr>
+              <th>FOTO</th>
+              <th>NOME DO RESPONSÁVEL</th>
+              <th>SEXO</th>
+              <th>ESPÉCIE</th>
+              <th>RAÇA</th>
+              <th>IDADE</th>
+              <th>PORTE</th>
+              <th>NOME DO PET</th>
+              <th>CARACTERÍSTICAS</th>
+              <th>ENDEREÇO</th>
+              <th>HISTÓRIA</th>
+              <th>AÇÕES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../Imagens/cat_3.jpg" alt="Foto do animal"></td>
+              <td>Lucas</td>
+              <td>Fêmea</td>
+              <td>Gato</td>
+              <td>Sphynx</td>
+              <td>1 ano</td>
+              <td>Pequeno</td>
+              <td>Lola</td>
+              <td>Curiosa, Independente</td>
+              <td>Rua D, 789</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>
+                <button class="accept-btn">Aceitar Solicitação</button>
+                <button class="reject-btn">Recusar Solicitação</button>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="../Imagens/dog_16.webp" alt="Foto do animal"></td>
+              <td>Felipe</td>
+              <td>Macho</td>
+              <td>Cachorro</td>
+              <td>Bulldog</td>
+              <td>3 anos</td>
+              <td>Grande</td>
+              <td>Rex</td>
+              <td>Leal, Protetor</td>
+              <td>Rua E, 123</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>
+                <button class="accept-btn">Aceitar Solicitação</button>
+                <button class="reject-btn">Recusar Solicitação</button>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="../Imagens/dog_11.jpeg" alt="Foto do animal"></td>
+              <td>Ana</td>
+              <td>Macho</td>
+              <td>Cachorro</td>
+              <td>Golden Retriever</td>
+              <td>2 anos</td>
+              <td>Médio</td>
+              <td>Toby</td>
+              <td>Ativo, Amigável</td>
+              <td>Rua F, 456</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>
+                <button class="accept-btn">Aceitar Solicitação</button>
+                <button class="reject-btn">Recusar Solicitação</button>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="../Imagens/cat_4.webp" alt="Foto do animal"></td>
+              <td>Felipe</td>
+              <td>Fêmea</td>
+              <td>Gato</td>
+              <td>Maine Coon</td>
+              <td>4 anos</td>
+              <td>Grande</td>
+              <td>Bella</td>
+              <td>Carinhosa, Sociável</td>
+              <td>Rua G, 789</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>
+                <button class="accept-btn">Aceitar Solicitação</button>
+                <button class="reject-btn">Recusar Solicitação</button>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="../Imagens/cat_3.jpg" alt="Foto do animal"></td>
+              <td>Pedro</td>
+              <td>Fêmea</td>
+              <td>Gato</td>
+              <td>Siamês</td>
+              <td>2 anos</td>
+              <td>Pequeno</td>
+              <td>Luna</td>
+              <td>Brincalhão, Sociável</td>
+              <td>Rua H, 456</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>
+                <button class="accept-btn">Aceitar Solicitação</button>
+                <button class="reject-btn">Recusar Solicitação</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Tela de Administração</title>
+          <link rel="stylesheet" type="text/css" href="style.css">
+          
+  <div id="usuarios">
+    <h2 >Usuários Registrados</h2>
+    <table id="lista-usuarios">
+      <tbody>
+        <!-- Os usuários serão adicionados dinamicamente aqui -->
+      </tbody>
+    </table>
+  </div>
+
+  <div id="perfil-usuario">
+    <h2>Perfil do Usuário</h2>
+    <table>
+      <tr>
+        <td><strong>Nome:</strong></td>
+        <td><span id="nome"></span></td>
+      </tr>
+      <tr>
+        <td><strong>E-mail:</strong></td>
+        <td><span id="email"></span></td>
+      </tr>
+      <tr>
+        <td><strong>Telefone:</strong></td>
+        <td><span id="telefone"></span></td>
+      </tr>
+    </table>
+
+    <button id="btn-voltar">Voltar</button>
+  </div>
+  
+
+        
+    <script src="../JS/ADM.js"></script>
+</body>
+</html>

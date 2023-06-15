@@ -64,7 +64,7 @@
           <ul class="navlinks">
             <li><a href="PetSpace.html#Adotar">Adotar</a></li>
   
-            <li><a>Doar</a></li>
+            <li><a href="Controle.html">Doar</a></li>
             
             <li><a href="PetSpace.html#Sobre">Sobre nós</a></li>
             <li><a href="PetSpace.html#Parcerias">Parcerias</a></li>
@@ -141,7 +141,7 @@
       <h1 class="title-lg" style="font-size: 30px;">Deseja divulgar um pet para adoção?</h1>
       <p class="mt-3 sm:mt-4">
       </p>
-      <div class="text-xl text-gray-500" style="font-size: 25px; ;">Preencha esse formulario de acordo com as informações do animal, em seguida clique no botao (Enviar). o formulario será analisado pela equipe Pet Space e caso seja aprovado, logo estará disponível na página principal visível para os adotantes.</div>
+      <div class="text-xl text-gray-500" style="font-size: 25px;">Preencha esse formulario de acordo com as informações do animal, em seguida clique no botao (Enviar). o formulario será analisado pela equipe Pet Space e caso seja aprovado, logo estará disponível na página principal visível para os adotantes.</div>
     </div>
   
     <form id="formato" action="/PYTHON/Usuarios.py" method="POST">
@@ -175,15 +175,7 @@
       <label for="idade" style="font-size: 20px;">Idade:</label>
       <input type="text" id="idade" name="idade" min="0" placeholder="Meses ou anos" required><br>
 
-      <label for="fase" style="font-size: 20px;">Fase:</label>
-      <select  id="fase" name="fase" required>
-        <option value="" >Selecione a fase</option>
-        <option value="filhote">Filhote</option>
-        <option value="jovem">Jovem</option>
-        <option value="adulto">Adulto</option>
-        <option value="idoso">Idoso</option>
-      </select>
-  
+   
       <label for="porte" style="font-size: 20px;">Porte:</label>
       <select id="porte" name="porte" required>
         <option value="pequeno">Pequeno</option>
@@ -241,78 +233,6 @@
     </form>
     
   
-  
-
-    <div style="text-align: center; padding: 20px; background-color: snow;" >
-      <h1>Animais divulgados</h1>
-    </div>
-  <table>
-    <thead>
-      <tr>
-        <th>FOTO</th>
-        <th>SEXO</th>
-        <th>ESPÉCIE</th>
-        <th>RAÇA</th>
-        <th>IDADE</th>
-        <th>PORTE</th>
-        <th>NOME DO PET</th>
-        <th>CARACTERÍSTICAS</th>
-        <th>ENDEREÇO</th>
-        <th>STATUS</th>
-        <th>AÇOES</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td>Macho</td>
-        <td>Cachorro</td>
-        <td>Poodle</td>
-        <td>3 anos</td>
-        <td>Pequeno</td>
-        <td>Max</td>
-        <td>Docíl, Vive bem em apartamento</td>
-        <td>Rua A, 123</td>
-        <td>Adotado</td>
-        <td>
-          <button class="edit-btn">Editar</button>
-          <button class="delete-btn">Excluir</button>
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Fêmea</td>
-        <td>Gato</td>
-        <td>Siamês</td>
-        <td>2 anos</td>
-        <td>Pequeno</td>
-        <td>Luna</td>
-        <td>Brincalhão, Sociável</td>
-        <td>Rua B, 456</td>
-        <td>Disponivel</td>
-        <td>
-          <button class="edit-btn">Editar</button>
-          <button class="delete-btn">Excluir</button>
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Macho</td>
-        <td>Cachorro</td>
-        <td>Labrador</td>
-        <td>1 ano</td>
-        <td>Grande</td>
-        <td>Bobby</td>
-        <td>Calmo, Gosta de crianças</td>
-        <td>Rua C, 789</td>
-        <td>Disponivel</td>
-        <td>
-          <button class="edit-btn">Editar</button>
-          <button class="delete-btn">Excluir</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
   <footer class="bg-dark text-light">
     <div class="container-fluid py-2">
     </div>

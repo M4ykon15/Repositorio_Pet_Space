@@ -10,8 +10,8 @@
         <h2>Estatísticas</h2>
         <ul>
             <li>Animais divulgados: <span id="adoptions">0</span></li>
-            <li>Solicitações pendentes: <span id="requests">0</span></li>
-            <!-- Adicione outras métricas relevantes aqui -->
+            <li>Solicitações pendentes (Doações): <span id="requests">0</span></li>
+            <li>Solicitações pendentes (Parcerias) <span id="requestsp">0</span></li>
         </ul>
     </div>
 
@@ -94,7 +94,7 @@
         </table>
         
         <div style="text-align: center; background-color: snow;">
-          <h1>Solicitações pendentes</h1>
+          <h1>Solicitações pendentes (Doações)</h1>
         </div>
         
         <table class="animais_pendentes">
@@ -202,12 +202,63 @@
             </tr>
           </tbody>
         </table>
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>Tela de Administração</title>
-          <link rel="stylesheet" type="text/css" href="style.css">
-          
+       
+        <div style="text-align: center; background-color: snow;">
+          <h1>Solicitações pendentes (Parcerias)</h1>
+        </div>
+        <table class="solicitacoes_pendentes">
+          <thead>
+            <tr>
+              <th>Logo</th>
+              <th>Nome do Responsável</th>
+              <th>Email</th>
+              <th>Telefone</th>
+              <th>CPF</th>
+              <th>Nome da Organização</th>
+              <th>Logradouro</th>
+              <th>Bairro</th>
+              <th>Cidade</th>
+              <th>CEP</th>
+              <th>AÇÕES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../Imagens/ONG_1.jpg" alt="Logo"></td>
+              <td>João Silva</td>
+              <td>joao@example.com</td>
+              <td>(99) 9999-9999</td>
+              <td>123.456.789-01</td>
+              <td>Amigo Bicho</td>
+              <td>Rua A, 123</td>
+              <td>Bairro A</td>
+              <td>Cidade A</td>
+              <td>12345-678</td>
+              <td>
+                <button class="accept-btn">Aceitar Solicitação</button>
+                <button class="reject-btn">Recusar Solicitação</button>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="../Imagens/ONG_2.jpg" alt="Logo"></td>
+              <td>Maria Oliveira</td>
+              <td>maria@example.com</td>
+              <td>(88) 8888-8888</td>
+              <td>987.654.321-01</td>
+              <td>Focinho Amigo</td>
+              <td>Rua B, 456</td>
+              <td>Bairro B</td>
+              <td>Cidade B</td>
+              <td>98765-432</td>
+              <td>
+                <button class="accept-btn">Aceitar Solicitação</button>
+                <button class="reject-btn">Recusar Solicitação</button>
+              </td>
+            </tr>
+            <!-- Adicione mais linhas conforme necessário -->
+          </tbody>
+        </table>
+      
   <div id="usuarios">
     <h2 >Usuários Registrados</h2>
     <table id="lista-usuarios">

@@ -1,12 +1,14 @@
 // Função para atualizar as estatísticas
 function atualizarEstatisticas() {
-  // Obter a quantidade de linhas nas tabelas de animais divulgados e solicitações pendentes
+  // Obter a quantidade de linhas nas tabelas de animais divulgados, solicitações pendentes (doações) e solicitações pendentes (parcerias)
   var animaisDivulgados = document.querySelectorAll('.animais_divulgados tbody tr').length;
   var solicitacoesPendentes = document.querySelectorAll('.animais_pendentes tbody tr').length;
+  var solicitacoesPendentesParcerias = document.querySelectorAll('.solicitacoes_pendentes tbody tr').length;
 
   // Atualizar os elementos HTML com as novas estatísticas
   document.getElementById('adoptions').textContent = animaisDivulgados;
   document.getElementById('requests').textContent = solicitacoesPendentes;
+  document.getElementById('requestsp').textContent = solicitacoesPendentesParcerias;
 }
 
 // Chamar a função inicialmente para exibir as estatísticas iniciais
@@ -17,8 +19,10 @@ var tableObserver = new MutationObserver(atualizarEstatisticas);
 var tableConfig = { childList: true, subtree: true };
 var animaisDivulgadosTable = document.querySelector('.animais_divulgados tbody');
 var solicitacoesPendentesTable = document.querySelector('.animais_pendentes tbody');
+var solicitacoesPendentesParceriasTable = document.querySelector('.solicitacoes_pendentes tbody');
 tableObserver.observe(animaisDivulgadosTable, tableConfig);
 tableObserver.observe(solicitacoesPendentesTable, tableConfig);
+tableObserver.observe(solicitacoesPendentesParceriasTable, tableConfig);
 
 
   function editarAnimal(event) {

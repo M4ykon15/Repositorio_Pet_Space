@@ -95,4 +95,13 @@ btn.addEventListener('click', ()=>{
   }
   
   
- 
+ function entrar() {
+  var email = document.getElementById('email').value;
+  var senha = document.getElementById('senha').value;
+
+  // Verificar se o email e a senha correspondem aos valores especiais
+  if (email === 'email@especial.com' && senha === 'senhaespecial') {
+    // Redirecionar para a tela de ADM
+    window.location.href = '../HTML/ADM.html';
+  }
+}

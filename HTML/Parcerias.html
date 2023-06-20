@@ -167,46 +167,110 @@
       <label for="nome-organizacao" style="font-size: 20px;">Nome da sua organização:</label>
       <input type="text" id="nome-organizacao" name="nome-organizacao" required><br>
 
-      <label for="logradouro" style="font-size: 20px;">Logradouro</label>
-      <input type="text" id="logradouro" placeholder="rua, avenida, praça - n°" name="logradouro" required><br>
-
-      <label for="bairro" style="font-size: 20px;">Bairro</label>
-      <input type="text" id="bairro" name="Bairro" required><br>
-
-      <label for="cidade" style="font-size: 20px;">Cidade</label>
-      <select id="cidade" name="cidade" required>
-        <option value="">Selecione uma cidade</option>
-        <option value="AC">AC - Acre</option>
-        <option value="AL">AL - Alagoas</option>
-        <option value="AP">AP - Amapá</option>
-        <option value="AM">AM - Amazonas</option>
-        <option value="BA">BA - Bahia</option>
-        <option value="CE">CE - Ceará</option>
-        <option value="DF">DF - Distrito Federal</option>
-        <option value="ES">ES - Espírito Santo</option>
-        <option value="GO">GO - Goiás</option>
-        <option value="MA">MA - Maranhão</option>
-        <option value="MT">MT - Mato Grosso</option>
-        <option value="MS">MS - Mato Grosso do Sul</option>
-        <option value="MG">MG - Minas Gerais</option>
-        <option value="PA">PA - Pará</option>
-        <option value="PB">PB - Paraíba</option>
-        <option value="PR">PR - Paraná</option>
-        <option value="PE">PE - Pernambuco</option>
-        <option value="PI">PI - Piauí</option>
-        <option value="RJ">RJ - Rio de Janeiro</option>
-        <option value="RN">RN - Rio Grande do Norte</option>
-        <option value="RS">RS - Rio Grande do Sul</option>
-        <option value="RO">RO - Rondônia</option>
-        <option value="RR">RR - Roraima</option>
-        <option value="SC">SC - Santa Catarina</option>
-        <option value="SP">SP - São Paulo</option>
-        <option value="SE">SE - Sergipe</option>
-        <option value="TO">TO - Tocantins</option>
+      <label for="regiao" style="font-size: 20px;">Região:</label>
+      <select id="regiao" name="regiao" style="font-size: 15px;">
+        <option value="">Selecione sua região</option>
+        <option value="Americana">Americana</option>
+        <option value="Araçatuba">Araçatuba</option>
+        <option value="Araraquara">Araraquara</option>
+        <option value="Araras">Araras</option>
+        <option value="Assis">Assis</option>
+        <option value="Atibaia">Atibaia</option>
+        <option value="Barretos">Barretos</option>
+        <option value="Barueri">Barueri</option>
+        <option value="Bauru">Bauru</option>
+        <option value="Birigui">Birigui</option>
+        <option value="Botucatu">Botucatu</option>
+        <option value="Bragança Paulista">Bragança Paulista</option>
+        <option value="Campinas">Campinas</option>
+        <option value="Carapicuíba">Carapicuíba</option>
+        <option value="Catanduva">Catanduva</option>
+        <option value="Cotia">Cotia</option>
+        <option value="Cubatão">Cubatão</option>
+        <option value="Diadema">Diadema</option>
+        <option value="Embu das Artes">Embu das Artes</option>
+        <option value="Ferraz de Vasconcelos">Ferraz de Vasconcelos</option>
+        <option value="Franca">Franca</option>
+        <option value="Francisco Morato">Francisco Morato</option>
+        <option value="Franco da Rocha">Franco da Rocha</option>
+        <option value="Guaratinguetá">Guaratinguetá</option>
+        <option value="Guarujá">Guarujá</option>
+        <option value="Guarulhos">Guarulhos</option>
+        <option value="Hortolândia">Hortolândia</option>
+        <option value="Indaiatuba">Indaiatuba</option>
+        <option value="Itapecerica da Serra">Itapecerica da Serra</option>
+        <option value="Itapetininga">Itapetininga</option>
+        <option value="Itapeva">Itapeva</option>
+        <option value="Itapevi">Itapevi</option>
+        <option value="Itaquaquecetuba">Itaquaquecetuba</option>
+        <option value="Jaboticabal">Jaboticabal</option>
+        <option value="Jacareí">Jacareí</option>
+        <option value="Jandira">Jandira</option>
+        <option value="Jaú">Jaú</option>
+        <option value="Jundiaí">Jundiaí</option>
+        <option value="Limeira">Limeira</option>
+        <option value="Marília">Marília</option>
+        <option value="Mauá">Mauá</option>
+        <option value="Mogi das Cruzes">Mogi das Cruzes</option>
+        <option value="Mogi Guaçu">Mogi Guaçu</option>
+        <option value="Osasco">Osasco</option>
+        <option value="Ourinhos">Ourinhos</option>
+        <option value="Paulínia">Paulínia</option>
+        <option value="Pindamonhangaba">Pindamonhangaba</option>
+        <option value="Piracicaba">Piracicaba</option>
+        <option value="Poá">Poá</option>
+        <option value="Praia Grande">Praia Grande</option>
+        <option value="Presidente Prudente">Presidente Prudente</option>
+        <option value="Ribeirão Pires">Ribeirão Pires</option>
+        <option value="Ribeirão Preto">Ribeirão Preto</option>
+        <option value="Rio Claro">Rio Claro</option>
+        <option value="Salto">Salto</option>
+        <option value="Santa Bárbara d'Oeste">Santa Bárbara d'Oeste</option>
+        <option value="Santana de Parnaíba">Santana de Parnaíba</option>
+        <option value="Santo André">Santo André</option>
+        <option value="Santos">Santos</option>
+        <option value="São Bernardo do Campo">São Bernardo do Campo</option>
+        <option value="São Caetano do Sul">São Caetano do Sul</option>
+        <option value="São Carlos">São Carlos</option>
+        <option value="São João da Boa Vista">São João da Boa Vista</option>
+        <option value="São José do Rio Preto">São José do Rio Preto</option>
+        <option value="São José dos Campos">São José dos Campos</option>
+        <option value="São Paulo">São Paulo</option>
+        <option value="São Roque">São Roque</option>
+        <option value="São Vicente">São Vicente</option>
+        <option value="Sertãozinho">Sertãozinho</option>
+        <option value="Sorocaba">Sorocaba</option>
+        <option value="Sumaré">Sumaré</option>
+        <option value="Suzano">Suzano</option>
+        <option value="Taboão da Serra">Taboão da Serra</option>
+        <option value="Taubaté">Taubaté</option>
+        <option value="Valinhos">Valinhos</option>
+        <option value="Várzea Paulista">Várzea Paulista</option>
+        <option value="Vinhedo">Vinhedo</option>
+        <option value="Votorantim">Votorantim</option>
+        <option value="Araçoiaba da Serra">Araçoiaba da Serra</option>
+        <option value="Arujá">Arujá</option>
+        <option value="Batatais">Batatais</option>
+        <option value="Caieiras">Caieiras</option>
+        <option value="Cajamar">Cajamar</option>
+        <option value="Campos do Jordão">Campos do Jordão</option>
+        <option value="Capivari">Capivari</option>
+        <option value="Embu-Guaçu">Embu-Guaçu</option>
+        <option value="Extrema">Extrema</option>
+        <option value="Ferraz de Vasconcelos">Ferraz de Vasconcelos</option>
+        <option value="Guararema">Guararema</option>
+        <option value="Itatiba">Itatiba</option>
+        <option value="Itupeva">Itupeva</option>
+        <option value="Louveira">Louveira</option>
+        <option value="Mairiporã">Mairiporã</option>
+        <option value="Monte Mor">Monte Mor</option>
+        <option value="Porto Feliz">Porto Feliz</option>
+        <option value="Santa Isabel">Santa Isabel</option>
+        <option value="São Lourenço da Serra">São Lourenço da Serra</option>
+        <option value="Socorro">Socorro</option>
+        <option value="Suzano">Suzano</option>
+        <option value="Tatuí">Tatuí</option>
       </select>
-
-      <label for="cep" style="font-size: 20px;">CEP:</label>
-      <input type="text" id="cep" placeholder="00.000-000" onkeypress="$(this).mask('00.000-000')">
 
       <label for="imagem" style="font-size: 20px;">Imagem da Logo:</label><br>
       <input type="file" id="input-foto" accept="image/*" onchange="mostrarFoto(event)">

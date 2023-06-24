@@ -1,3 +1,23 @@
+<?php
+
+if(isset($_POST['submit'])){
+
+  // print_r($_POST['email']);
+  // print_r('<br>');
+  // print_r($_POST['senha']);
+
+ include_once('../dados.php');
+
+  $email = $_POST['email'];
+  $senha = $_POST['senha'];
+
+  $result = mysqli_query($conexao, "INSERT INTO usuarios (email, senha) VALUES ('$email', '$senha')");
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,7 +32,7 @@
         </head>
         
         <body>
-        
+      
           <div class="div_1">
             <a href="../HTML/PetSpace.html">
               <img src="../Imagens/voltar.png">
@@ -26,10 +46,12 @@
           <div class='card'>
             <h1> LOGIN </h1>
             
+
+            
             <div id='msgError'></div>
             <div id='msgSuccess'></div>
-          
-            
+                    
+            <form method="POST" action="Login.php">
 
             <div class='label-float'>
               <input type='text' id='email' name="email" required>
@@ -44,9 +66,11 @@
             </div>
             
             <div class='justify-center'>
-              <button id="btn" onclick='entrar()'>Entrar</button>
+              <button id="btn" name ="submit" onclick='entrar()'>Entrar</button>
             </div>
             
+            </form>
+
             <div class='justify-center'>
               <hr>
             </div>

@@ -30,9 +30,9 @@ btn.addEventListener('click', ()=>{
     email.setAttribute('style', 'border-color: red')
       return false;
     }
-    else if(email.value.length <= 5 || !email.value.includes('admin@gmail.com')) {
+    else if(email.value.length <= 5) {
       labelEmail.setAttribute('style', 'color: red')
-      labelEmail.innerHTML = 'Email ("Preencha com admin@gmail.com")'
+      labelEmail.innerHTML = 'Email ("Preencha com mais de 5")'
       email.setAttribute('style', 'border-color: red')
       validEmail = false
     } else {

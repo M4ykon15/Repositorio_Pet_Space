@@ -12,6 +12,20 @@ if(isset($_POST['submit'])){
   $senha = $_POST['senha'];
 
   $result = mysqli_query($conexao, "INSERT INTO usuarios (email, senha) VALUES ('$email', '$senha')");
+
+  if (strlen($email) == 5 && substr($email, -10) === '@gmail.com' && strlen($senha) == 6) {
+    // Redirecionar para a página PetSpace.html
+    header("Location: PetSpace.html");
+    exit();
+  }
+ 
+  else if ($email == 'email@especial.com' && $senha == 'senhaespecial') {
+    // Redirecionar para a página ADM.html
+    header("Location: ADM.html");
+    exit();
+
+  }  
+
 }
 
 
@@ -51,7 +65,7 @@ if(isset($_POST['submit'])){
             <div id='msgError'></div>
             <div id='msgSuccess'></div>
                     
-            <form method="POST" action="Login.php">
+            <form  method="POST" action="">
 
             <div class='label-float'>
               <input type='text' id='email' name="email" required>
@@ -67,6 +81,7 @@ if(isset($_POST['submit'])){
             
             <div class='justify-center'>
               <button id="btn" name ="submit" onclick='entrar()'>Entrar</button>
+              
             </div>
             
             </form>
@@ -83,6 +98,7 @@ if(isset($_POST['submit'])){
           </div>
 
 
+        
           <script src="../JS/Login.js"></script>
 
         </body>

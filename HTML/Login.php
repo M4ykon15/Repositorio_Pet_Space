@@ -1,42 +1,9 @@
-<?php
-
-if(isset($_POST['submit'])){
-
-  // print_r($_POST['email']);
-  // print_r('<br>');
-  // print_r($_POST['senha']);
-
- include_once('../dados.php');
-
-  $email = $_POST['email'];
-  $senha = $_POST['senha'];
-
-  $result = mysqli_query($conexao, "INSERT INTO usuarios (email, senha) VALUES ('$email', '$senha')");
-
-  if (strlen($email) == 5 && substr($email, -10) === '@gmail.com' && strlen($senha) == 6) {
-    // Redirecionar para a página PetSpace.html
-    header("Location: PetSpace.html");
-    exit();
-  }
- 
-  else if ($email == 'email@especial.com' && $senha == 'senhaespecial') {
-    // Redirecionar para a página ADM.html
-    header("Location: ADM.html");
-    exit();
-
-  }  
-
-}
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
     <head>
-       
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
         <link rel="stylesheet" href="../CSS/Login.css">
         <title>Pet Space</title>
@@ -56,27 +23,24 @@ if(isset($_POST['submit'])){
 
         <div class='container'>
 
-        
+
+        <div id='msgError'></div>
           <div class='card'>
             <h1> LOGIN </h1>
             
-
-            
-            <div id='msgError'></div>
             <div id='msgSuccess'></div>
                     
-            <form  method="POST" action="">
+            <form  method="POST" action="../HTML/testLogin.php">
 
             <div class='label-float'>
               <input type='text' id='email' name="email" required>
               <label id='labelEmail' for='email'>Email</label>
             </div>
             
-            <div class='label-float'>
-              <input type='password' id='senha' name="senha" required>
-              <label id='labelSenha' for='senha'>Senha</label>
-
-              <i class="fa fa-eye" aria-hidden="true"></i>
+            <div class="label-float">
+              <input type="password" id="senha" name="senha" placeholder=" " required>
+                <label class="letra" id="labelSenha" for="senha">Senha</label>
+                 <i class="fa fa-eye" id="eyeIcon" aria-hidden="true"></i>
             </div>
             
             <div class='justify-center'>
@@ -91,7 +55,7 @@ if(isset($_POST['submit'])){
             </div>
             
             <p> Não possui uma conta?
-              <a href='../HTML/Cadastrar.html'> Cadastre-se </a>
+              <a href='../HTML/Cadastrar.php'> Cadastre-se </a>
             </p>
             
           </div>

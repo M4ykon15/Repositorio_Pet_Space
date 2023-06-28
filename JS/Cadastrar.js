@@ -1,6 +1,3 @@
-let btn = document.querySelector('#eyeSvg1')
-let btnConfirm = document.querySelector('#eyeSvg2')
-
 
 let nome = document.querySelector('#nome')
 let labelNome = document.querySelector('#labelNome')
@@ -18,12 +15,29 @@ let senha = document.querySelector('#senha')
 let labelSenha = document.querySelector('#labelSenha')
 let validSenha = false
 
-let confirmSenha = document.querySelector('#confirmSenha')
-let labelConfirmSenha = document.querySelector('#labelConfirmSenha')
-let validConfirmSenha = false
+let telefone = document.querySelector('#telefone');
+let labelTelefone = document.querySelector('#labelTelefone');
+let validTelefone = false;
 
 let msgError = document.querySelector('#msgError')
 let msgSuccess = document.querySelector('#msgSuccess')
+
+
+let btn = document.querySelector('#eyeIcon');
+
+  btn.addEventListener('click', () => {
+    let inputSenha = document.querySelector('#senha');
+
+    if (inputSenha.getAttribute('type') === 'password') {
+      inputSenha.setAttribute('type', 'text');
+      btn.classList.remove('fa-eye');
+      btn.classList.add('fa-eye-slash');
+    } else {
+      inputSenha.setAttribute('type', 'password');
+      btn.classList.remove('fa-eye-slash');
+      btn.classList.add('fa-eye');
+    }
+  });
 
 
 
@@ -65,6 +79,31 @@ email.addEventListener('keyup', () => {
 
 
 
+
+telefone.addEventListener('keyup', () => {
+  const telefoneSemMascara = telefone.value.replace(/\D/g, ''); // Remove a máscara do telefone
+  const telefoneComMascara = telefoneSemMascara.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3'); // Adiciona a máscara do telefone
+
+  if (telefoneSemMascara.length !== 11) {
+    labelTelefone.setAttribute('style', 'color: red');
+    labelTelefone.innerHTML = 'Telefone incorreto. Insira 11 números';
+    telefone.setAttribute('style', 'border-color: red');
+    validTelefone = false;
+  } else {
+    labelTelefone.setAttribute('style', 'color: green');
+    labelTelefone.innerHTML = 'Telefone';
+    telefone.value = telefoneComMascara; // Atribui o valor com a máscara ao campo de telefone
+    telefone.setAttribute('style', 'border-color: green');
+    validTelefone = true;
+  }
+});
+
+
+
+
+
+
+
 cpf.addEventListener('keyup', () => {
   const cpfSemMascara = cpf.value.replace(/\D/g, '') // remove a máscara do CPF
   const cpfComMascara = cpfSemMascara.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4") // adiciona a máscara no CPF
@@ -98,42 +137,11 @@ senha.addEventListener('keyup', () => {
   }
 })
 
-confirmSenha.addEventListener('keyup', () => {
-  if(senha.value != confirmSenha.value && (" ")){
-    labelConfirmSenha.setAttribute('style', 'color: red')
-    labelConfirmSenha.innerHTML = 'As senhas não são iguais'
-    confirmSenha.setAttribute('style', 'border-color: red')
-    validConfirmSenha = false
-  } else {
-    labelConfirmSenha.setAttribute('style', 'color: green')
-    labelConfirmSenha.innerHTML = 'Confirmar Senha'
-    confirmSenha.setAttribute('style', 'border-color: green')
-    validConfirmSenha = true
-  }
-})
 
-confirmSenha.addEventListener('keyup', () => {
-  if (confirmSenha.value.length === 0) { // verifica se a classe confirmSenha está vazia
-    labelConfirmSenha.setAttribute('style', 'color: red')
-    labelConfirmSenha.innerHTML = 'Confirme a senha'
-    confirmSenha.setAttribute('style', 'border-color: red')
-    validConfirmSenha = false
-  } else if (senha.value !== confirmSenha.value) {
-    labelConfirmSenha.setAttribute('style', 'color: red')
-    labelConfirmSenha.innerHTML = 'As senhas não são iguais'
-    confirmSenha.setAttribute('style', 'border-color: red')
-    validConfirmSenha = false
-  } else {
-    labelConfirmSenha.setAttribute('style', 'color: green')
-    labelConfirmSenha.innerHTML = 'Confirmar Senha'
-    confirmSenha.setAttribute('style', 'border-color: green')
-    validConfirmSenha = true
-  }
-})
 
 
 function cadastrar(){
-  if(validNome && validEmail && validCpf && validSenha && validConfirmSenha){
+  if(validNome && validEmail && validCpf && validSenha && validTelefone){
 
     msgSuccess.setAttribute('style', 'display: block')
     msgSuccess.innerHTML = '<strong>Cadastrando usuário...</strong>'
@@ -155,23 +163,3 @@ function cadastrar(){
   }
 }
 
-//icone do botão de ver senha!!
-btn.addEventListener('click', ()=>{
-  let inputSenha = document.querySelector('#senha')
-  
-  if(inputSenha.getAttribute('type') == 'password'){
-    inputSenha.setAttribute('type', 'text')
-  } else {
-    inputSenha.setAttribute('type', 'password')
-  }
-})
-
-btnConfirm.addEventListener('click', ()=>{
-  let inputConfirmSenha = document.querySelector('#confirmSenha')
-  
-  if(inputConfirmSenha.getAttribute('type') == 'password'){
-    inputConfirmSenha.setAttribute('type', 'text')
-  } else {
-    inputConfirmSenha.setAttribute('type', 'password')
-  }
-})

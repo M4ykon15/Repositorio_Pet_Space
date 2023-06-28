@@ -1,3 +1,17 @@
+<?php
+ session_start();
+// print_r($_SESSION);
+
+if((!isset($_SESSION['email']) == true) and (!isset($SESSION['senha']) == true))
+{
+  
+  unset($_SESSION['email']);
+    unset($_SESSION['senha']);
+  header('Location : Login.php');
+}
+  $logado = $_SESSION['email'];
+  
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -7,10 +21,24 @@
 
     
     <title>Painel de Controle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/ADM.css">
 </head>
 <body>
-    <h1>Bem-vindo ao Painel de Controle</h1>
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand">Bem vindo ao Painel de Controle </a> -->
+    <?php
+       echo"<h4> Bem Vindo, $logado</h4>";
+        
+    ?>
+    
+    <div class ="d-flex">
+      <a href="../sair.php" class="btn btn-danger">Sair</a>
+    </div>
+  </div>
+</nav>
+    
     <div id="estatisticas">
         <h2>Estatísticas</h2>
         <ul>
@@ -208,54 +236,9 @@
           </tbody>
         </table>
        
-        <div style="text-align: center; background-color: snow;">
-          <h1>Solicitações pendentes (Parcerias)</h1>
-        </div>
-        <table class="solicitacoes_pendentes">
-          <thead>
-            <tr>
-              <th>LOGO</th>
-              <th>NOME DO RESPONSAVEL</th>
-              <th>EMAIL</th>
-              <th>TELEFONE</th>
-              <th>CPF</th>
-              <th>NOME DA ORGANIZACA0</th>
-              <th>REGIAO</th>
-              <th>AÇÕES</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><img src="../Imagens/ONG_1.jpg" alt="Logo"></td>
-              <td>João Silva</td>
-              <td>joao@example.com</td>
-              <td>(99) 9999-9999</td>
-              <td>123.456.789-01</td>
-              <td>Amigo Bicho</td>
-              <td>Sao Paulo</td>
-              <td>
-                <button class="accept-btn">Aceitar Solicitação</button>
-                <button class="reject-btn">Recusar Solicitação</button>
-              </td>
-            </tr>
-            <tr>
-              <td><img src="../Imagens/ONG_2.jpg" alt="Logo"></td>
-              <td>Maria Oliveira</td>
-              <td>maria@example.com</td>
-              <td>(88) 8888-8888</td>
-              <td>987.654.321-01</td>
-              <td>Focinho Amigo</td>
-              <td>Santos</td>
-              <td>
-                <button class="accept-btn">Aceitar Solicitação</button>
-                <button class="reject-btn">Recusar Solicitação</button>
-              </td>
-            </tr>
-            <!-- Adicione mais linhas conforme necessário -->
-          </tbody>
-        </table>
+        
       
-  <div id="usuarios">
+        <div id="usuarios">
     <h2 >Usuários Registrados</h2>
     <table id="lista-usuarios">
       <tbody>

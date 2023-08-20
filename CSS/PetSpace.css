@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 
-html,
+
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: "Quicksand", sans-serif;
-    font-size: 62.5%;
-    font-size: 10px;
+    font-size: 60.5%;
 }
 
 /*-- Inspiration taken from abdo steif -->
@@ -15,13 +13,13 @@ body {
 
 /* Navbar section */
 
-.nav {
+/* .nav {
     width: 100%;
     height: 65px;
     position: fixed;
     line-height: 65px;
     text-align: center;
-}
+} */
 
 .nav div.logo {
     float: left;
@@ -418,18 +416,9 @@ label {
     margin-bottom: 1.5rem;
 }
 
-.nav {
-    width: 100%;
-    height: 65px;
-    position: absolute;
-    line-height: 30px;
-    text-align: center;
-}
 
-label {
-    display: table-cell;
-    margin-bottom: 1.5rem;
-}
+
+
 
 label {
     margin: 0;

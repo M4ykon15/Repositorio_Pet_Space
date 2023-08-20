@@ -4,27 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Imagens/icon_pata.ico" type="image/x-icon">
-    
-  <title>Doação</title>
 
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" href="../Imagens/icon_pata.ico" type="image/x-icon">
-
-  <link rel="stylesheet" href="../CSS/Controle.css">
-  <script src="../JS/Controle.js"></script>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script type="text/javascript" src="../JS/Controle.js"></script>
+  <title>Pet Space</title>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
     crossorigin="anonymous"></script>
 
@@ -40,8 +26,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-  <link rel="stylesheet" href="../CSS/PetSpace.css">
-  <script src="../JS/Controle.js"></script>
+  <link rel="stylesheet" href="../CSS/Controle.css">
 
 
 
@@ -49,16 +34,16 @@
 
   <body>
   
-    <nav class="nav" style="z-index: 999;">
+    <nav class="nav" style="z-index: 999; background-color: black; padding-bottom: 70px">
       <div class="container">
         <div class="logo">
-          <a href="#">PET SPACE</a>
+          <a href="../HTML/PetSpace.html">PET SPACE</a>
         </div>
-        <a href="../HTML/Login.html">
+        <a href="../HTML/Login.php">
           <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" style="margin-right: 10px;"
             data-target="#Login">Entrar</button>
         </a>
-        <a href="../HTML/Cadastrar.html">
+        <a href="../HTML/Cadastrar.php">
           <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" style="margin-right: 10px;"
             data-target="#Login">Cadastrar</button>
         </a>
@@ -85,13 +70,11 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                          <div class="dados" style="text-align: center;margin-bottom: 10px;">
+                          
+                  <div class="dados" style="text-align: center;margin-bottom: 10px;">
                             <h2>Dados Pessoais</h2>
-                          </div>
-                        
-                           
-                             
-                                <h3 class="card-title" style="text-align: center;color: #00ff00">
+                          </div>                                                   
+                       <h3 class="card-title" style="text-align: center;color: #00ff00">
                                   Email</h3>
                                   <h4 class="card-text">admin123@gmail.com</h4>
                                   <h3 class="card-title" style="text-align: center;color: #00ff00">
@@ -100,54 +83,33 @@
                                     <div class="tab">
                                     
                                       <button id="tamanho_botao" class="tablinks" type="button" class="btn btn-outline-light btn-lg" onclick="logout()">Logout</button>
-                                  
+                                
                                     </div>
-                                  
-              
-                                  
-                              
-                          
+                               
                           </div>
-  </li>
-          </ul>
-        </div>
-        <span class="navTrigger">
-          <i></i>
-          <i></i>
-          <i></i>
-        </span>
-      </div>
-    </nav>
-  
-    </section>
   
 
 
     
+                        </nav>
   
-    <script>
-      $(window).scroll(function () {
-        if ($(document).scrollTop() > 50) {
-          $('.nav').addClass('affix');
-          console.log("OK");
-        } else {
-          $('.nav').removeClass('affix');
-        }
-      });
-    </script>
-    </nav>
 
 
-    <div class="Dashboard">DASHBOARD</div>
+   
    
 
-    <div class="lg:py-10 py-5" style="background-color:snow; text-align: center; ">
-      <h1 class="title-lg" style="font-size: 30px;">Deseja divulgar um pet para adoção?</h1>
+    <div class="content" style= "padding-top: 150px;">
+      <h1 class="title-lg" style="font-size: 25px; text-align: center;">Deseja divulgar um pet para adoção?</h1>
       <p class="mt-3 sm:mt-4">
       </p>
-      <div class="text-xl text-gray-500" style="font-size: 25px;">Preencha esse formulario de acordo com as informações do animal, em seguida clique no botao (Enviar). o formulario será analisado pela equipe Pet Space e caso seja aprovado, logo estará disponível na página principal visível para os adotantes.</div>
+      <div class="text-xl text-gray-500" style="font-size: 25px; text-align: center;">Preencha esse formulario de acordo com as informações do animal, em seguida clique no botao (Enviar). o formulario será analisado pela equipe Pet Space e caso seja aprovado, logo estará disponível na página principal visível para os adotantes.</div>
     </div>
   
+
+
+
+
+    <div class="forms" style="margin: 25px 25px 25px 25px; padding-top: 25px;">
     <form action="" method="POST">
 
       <label for="nome_doador" style="font-size: 20px;">Nome do responsável (Doador):</label>
@@ -157,7 +119,7 @@
       <input type="text" id="nome_pet" name="nome_pet" required><br>
   
       <label for="sexo" style="font-size: 20px;">Sexo:</label>
-      <select id="sexo" name="sexo" required>
+      <select id="sexo" name="sexo" style="padding-top: 10px;"   required>
         <option value="macho">Macho</option>
         <option value="femea">Fêmea</option>
       </select><br>
@@ -190,138 +152,38 @@
       <label for="caracteristicas" style="font-size: 20px;">Características:</label><br>
   
       <input type="checkbox" id="docil" name="caracteristicas[]" value="Docil">
-      <label for="docil">Dócil</label><br>
+      <label for="docil" style="font-size: 20px;">Dócil</label><br>
   
       <input type="checkbox" id="brincalhao" name="caracteristicas[]" value="Brincalhao">
-      <label for="brincalhao">Brincalhão</label><br>
+      <label for="brincalhao" style="font-size: 20px;">Brincalhão</label><br>
   
       <input type="checkbox" id="sociavel" name="caracteristicas[]" value="Sociavel">
-      <label for="sociavel">Sociável</label><br>
+      <label for="sociavel" style="font-size: 20px;">Sociável</label><br>
   
-      <input type="checkbox" id="carente" name="caracteristicas[]" value="Carente">
-      <label for="carente">Carente</label><br>
   
       <input type="checkbox" id="calmo" name="caracteristicas[]" value="Calmo">
-      <label for="calmo">Calmo</label><br>
+      <label for="calmo" style="font-size: 20px;">Calmo</label><br>
   
-      <input type="checkbox" id="vive_apartamento" name="caracteristicas[]" value="Vive_apartamento">
-      <label for="vive_apartamento">Vive bem em apartamento</label><br>
   
       <input type="checkbox" id="vive_casa_quintal" name="caracteristicas[]" value="Vive_casa_quintal">
-      <label for="vive_casa_quintal">Vive bem em casa com quintal</label><br>
+      <label for="vive_casa_quintal" style="font-size: 20px;">Vive bem em casa com quintal</label><br>
   
       <input type="checkbox" id="castrado" name="caracteristicas[]" value="Castrado">
-      <label for="castrado">Castrado</label><br>
+      <label for="castrado" style="font-size: 20px;" >Castrado</label><br>
   
       <input type="checkbox" id="vermifugado" name="caracteristicas[]" value="Vermifugado">
-      <label for="vermifugado">Vermifugado</label><br>
-  
-      <input type="checkbox" id="gosta_criancas" name="caracteristicas[]" value="Gosta_criancas">
-      <label for="gosta_criancas">Gosta de crianças</label><br>
+      <label for="vermifugado" style="font-size: 20px;">Vermifugado</label><br>
   
       <label for="regiao" style="font-size: 20px;">Região:</label>
     <select id="regiao" name="regiao" style="font-size: 15px;">
       <option value="">Selecione sua região</option>
-      <option value="Americana">Americana</option>
-      <option value="Araçatuba">Araçatuba</option>
-      <option value="Araraquara">Araraquara</option>
-      <option value="Araras">Araras</option>
-      <option value="Assis">Assis</option>
-      <option value="Atibaia">Atibaia</option>
-      <option value="Barretos">Barretos</option>
       <option value="Barueri">Barueri</option>
-      <option value="Bauru">Bauru</option>
-      <option value="Birigui">Birigui</option>
-      <option value="Botucatu">Botucatu</option>
-      <option value="Bragança Paulista">Bragança Paulista</option>
-      <option value="Campinas">Campinas</option>
-      <option value="Carapicuíba">Carapicuíba</option>
-      <option value="Catanduva">Catanduva</option>
-      <option value="Cotia">Cotia</option>
-      <option value="Cubatão">Cubatão</option>
-      <option value="Diadema">Diadema</option>
-      <option value="Embu das Artes">Embu das Artes</option>
-      <option value="Ferraz de Vasconcelos">Ferraz de Vasconcelos</option>
-      <option value="Franca">Franca</option>
-      <option value="Francisco Morato">Francisco Morato</option>
-      <option value="Franco da Rocha">Franco da Rocha</option>
-      <option value="Guaratinguetá">Guaratinguetá</option>
-      <option value="Guarujá">Guarujá</option>
-      <option value="Guarulhos">Guarulhos</option>
-      <option value="Hortolândia">Hortolândia</option>
-      <option value="Indaiatuba">Indaiatuba</option>
-      <option value="Itapecerica da Serra">Itapecerica da Serra</option>
-      <option value="Itapetininga">Itapetininga</option>
-      <option value="Itapeva">Itapeva</option>
+      <option value="Engenho Novo">Engenho Novo</option>
       <option value="Itapevi">Itapevi</option>
-      <option value="Itaquaquecetuba">Itaquaquecetuba</option>
-      <option value="Jaboticabal">Jaboticabal</option>
-      <option value="Jacareí">Jacareí</option>
       <option value="Jandira">Jandira</option>
-      <option value="Jaú">Jaú</option>
-      <option value="Jundiaí">Jundiaí</option>
-      <option value="Limeira">Limeira</option>
-      <option value="Marília">Marília</option>
-      <option value="Mauá">Mauá</option>
-      <option value="Mogi das Cruzes">Mogi das Cruzes</option>
-      <option value="Mogi Guaçu">Mogi Guaçu</option>
-      <option value="Osasco">Osasco</option>
-      <option value="Ourinhos">Ourinhos</option>
-      <option value="Paulínia">Paulínia</option>
-      <option value="Pindamonhangaba">Pindamonhangaba</option>
-      <option value="Piracicaba">Piracicaba</option>
-      <option value="Poá">Poá</option>
-      <option value="Praia Grande">Praia Grande</option>
-      <option value="Presidente Prudente">Presidente Prudente</option>
-      <option value="Ribeirão Pires">Ribeirão Pires</option>
-      <option value="Ribeirão Preto">Ribeirão Preto</option>
-      <option value="Rio Claro">Rio Claro</option>
-      <option value="Salto">Salto</option>
-      <option value="Santa Bárbara d'Oeste">Santa Bárbara d'Oeste</option>
-      <option value="Santana de Parnaíba">Santana de Parnaíba</option>
-      <option value="Santo André">Santo André</option>
-      <option value="Santos">Santos</option>
-      <option value="São Bernardo do Campo">São Bernardo do Campo</option>
-      <option value="São Caetano do Sul">São Caetano do Sul</option>
-      <option value="São Carlos">São Carlos</option>
-      <option value="São João da Boa Vista">São João da Boa Vista</option>
-      <option value="São José do Rio Preto">São José do Rio Preto</option>
-      <option value="São José dos Campos">São José dos Campos</option>
-      <option value="São Paulo">São Paulo</option>
-      <option value="São Roque">São Roque</option>
-      <option value="São Vicente">São Vicente</option>
-      <option value="Sertãozinho">Sertãozinho</option>
-      <option value="Sorocaba">Sorocaba</option>
-      <option value="Sumaré">Sumaré</option>
-      <option value="Suzano">Suzano</option>
-      <option value="Taboão da Serra">Taboão da Serra</option>
-      <option value="Taubaté">Taubaté</option>
-      <option value="Valinhos">Valinhos</option>
-      <option value="Várzea Paulista">Várzea Paulista</option>
-      <option value="Vinhedo">Vinhedo</option>
-      <option value="Votorantim">Votorantim</option>
-      <option value="Araçoiaba da Serra">Araçoiaba da Serra</option>
-      <option value="Arujá">Arujá</option>
-      <option value="Batatais">Batatais</option>
-      <option value="Caieiras">Caieiras</option>
-      <option value="Cajamar">Cajamar</option>
-      <option value="Campos do Jordão">Campos do Jordão</option>
-      <option value="Capivari">Capivari</option>
-      <option value="Embu-Guaçu">Embu-Guaçu</option>
-      <option value="Extrema">Extrema</option>
-      <option value="Ferraz de Vasconcelos">Ferraz de Vasconcelos</option>
-      <option value="Guararema">Guararema</option>
-      <option value="Itatiba">Itatiba</option>
-      <option value="Itupeva">Itupeva</option>
-      <option value="Louveira">Louveira</option>
-      <option value="Mairiporã">Mairiporã</option>
-      <option value="Monte Mor">Monte Mor</option>
-      <option value="Porto Feliz">Porto Feliz</option>
-      <option value="Santa Isabel">Santa Isabel</option>
-      <option value="São Lourenço da Serra">São Lourenço da Serra</option>
-      <option value="Socorro">Socorro</option>
-      <option value="Suzano">Suzano</option>
-      <option value="Tatuí">Tatuí</option>
+      <option value="Jardim Paulista">Jardim Paulista</option>
+      <option value="Alphaville">Alphaville</option>
+
     </select>
 
       <label for="historia" style="font-size: 20px;">Historia:</label><br>
@@ -333,25 +195,20 @@
     <img id="imagem" src="#" alt="Foto">
 
 
-      <p style="font-size: 150%;margin-top: 2%;">Após preencher o formulário e clicar em enviar, os dados inseridos serão avaliados pela equipe da PetSpace para decidir se o pet ficará disponível no site</p>
+      <p style="font-size: 15px ;margin-top: 2%;">Após preencher o formulário e clicar em enviar, os dados inseridos serão avaliados pela equipe da PetSpace para decidir se o pet ficará disponível no site</p>
 
-      <button type="submit" class="btn btn-success btn-lg">Enviar</button>
+      <button type="submit" class="btn btn-success btn-lg" style="margin-bottom: 50px;">Enviar</button>
     </form>
-    
   
-  <footer class="bg-dark text-light">
-    <div class="container-fluid py-2">
-    </div>
-    <div class="text-center">
-      <p>Somos uma organização que busca mudar a vida de varios pets e de várias pessoas.</p>
-    </div>
 
-    <div class="text-center" style="background-color: #333; padding: 30px;">
-      Pet Space Copyright © 2022.<p> © Todos os direitos reservados - Somos a PetSpace. Desde 2022 no mercado.</p>
-    </div>
-</div>
-</footer>
+    <footer class="bg-dark text-light" style="font-size: 20px; padding-top: 20px; height: 150px; width: 98.2% ;position: absolute;">
+      <div>
+          <p style="margin-left: 20%;">Somos uma organização que busca mudar a vida de vários pets e de várias pessoas.</p>
+          <p style=" margin-left: 35%;">Pet Space Copyright © 2022 - 2023.</p>
+          <p style=" margin-left: 20%;">© Todos os direitos reservados - Somos a PetSpace. Desde 2022 no mercado.</p>
+      </div>
+  </footer>
 
-<!-- //teste -->
+
 </body>
 </html>

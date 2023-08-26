@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Quicksand", sans-serif;
-    font-size: 60.5%;
+    overflow-y: hidden;
 }
 
 /*-- Inspiration taken from abdo steif -->
@@ -13,13 +13,13 @@ body {
 
 /* Navbar section */
 
-/* .nav {
+.nav {
     width: 100%;
     height: 65px;
     position: fixed;
     line-height: 65px;
     text-align: center;
-} */
+}
 
 .nav div.logo {
     float: left;
@@ -87,7 +87,7 @@ body {
 
 .nav {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
@@ -359,10 +359,7 @@ body {
     }
 }
 
-.affix {
-    padding: 0;
-    background-color: #111;
-}
+
 
 
 
@@ -702,3 +699,5 @@ body {
             width: 100%;
             margin: 0 auto;
           }
+
+         

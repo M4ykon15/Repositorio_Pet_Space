@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Imagens/icon_pata.ico" type="image/x-icon">
 
+    <title>Pet Space</title>
+    
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script type="text/javascript" src="../JS/PetSpace.js"></script>
-  <title>Pet Space</title>
+  
+ 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
@@ -26,8 +29,9 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
+  
+  <title>Pet Space</title>
   <link rel="stylesheet" href="../CSS/PetSpace.css">
-
 
 
 </head>
@@ -37,18 +41,20 @@
   
 
 
-
-  <nav class="nav" style="z-index: 999;">
+ 
+  <nav class="nav" style="z-index: 999; width: 100%;  height: 75px;  position: fixed;  line-height: 65px;  text-align: center";>
+   
     <div class="container">
+      
       <div class="logo">
         <a href="#">PET SPACE</a>
       </div>
       <a href="../HTML/Login.php">
-        <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" style="margin-right: 10px;"
+        <button type="button-entrar" class="btn btn-outline-light btn-lg" data-toggle="modal" style="margin-right: 10px;font-size: 15px;"
           data-target="#Login">Entrar</button>
       </a>
       <a href="../HTML/Cadastrar.php">
-        <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" style="margin-right: 10px;"
+        <button type="button-cadastrar" class="btn btn-outline-light btn-lg" data-toggle="modal" style="margin-right: 10px; font-size: 15px;"
           data-target="#Login">Cadastrar</button>
       </a>
 
@@ -60,57 +66,13 @@
 
       <div id="mainListDiv" class="main_list">
         <ul class="navlinks">
-          <li><a href="#Adotar">Adotar</a></li>
-
-          <li><a href="Controle.html">Doar</a>
-          </li>
-          <li><a href="#Sobre">Sobre nós</a></li>
-          <li><a href="#Parcerias">Parcerias</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#Perfil">Perfil</a></li>
-
-
-          <div class="modal fade" id="Perfil" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title" id="TituloModalCentralizado">Perfil</h1>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                        <div class="dados" style="text-align: center;margin-bottom: 10px;">
-                          <h2>Dados Pessoais</h2>
-                        </div>
-
-
-
-                        <h3 class="card-title" style="text-align: center;color: #00ff00">
-                          Email</h3>
-                        <h4 class="card-text">admin123@gmail.com</h4>
-                        <h3 class="card-title" style="text-align: center;color: #00ff00">
-                          Senha</h3>
-                        <h4 class="card-text">admin123</h4>
-                        <div class="tab">
-
-                          <button id="tamanho_botao" class="tablinks" type="button" class="btn btn-outline-light btn-lg"
-                            onclick="logout()">Logout</button>
-
-                        </div>
-
-
-
-
-
-                      </div>
-                    </div>
-              </li>
+          <li><a href="#Adotar" style="font-size: 30px;">Adotar</a></li>
+          <li><a href="#Sobre" style="font-size: 30px;">Sobre nós</a></li>
+          
+          
         </ul>
       </div>
-      <span class="navTrigger">
-        <i></i>
-        <i></i>
-        <i></i>
-      </span>
+      
     </div>
   </nav>
 
@@ -1745,11 +1707,11 @@
     <div class="title-adote">
       <h1>Porquê você deve adotar um bichinho: </h1>
     </div>
-    <div class="center-card" style="background-color: snow;font-size: 15px;text-align: center;">
+    <div class="center-card" style="background-color: snow;font-size: 5px;text-align: center;">
       <div class="card bg-light mb-3; card border-info "
         style="max-width: 20rem;  border-radius: 20px; margin-right: 50px; margin-top: 15px; height: 80%;">
         <div class="text-card">
-          <h3 class="card-title">Você terá um companheiro para todas as horas</h3>
+          <p class="card-title" style="font-size: 20px;"><b>Você terá um companheiro para todas as horas</b></p>
           <p class="card-text1">Animais são companheiros leais e fieis, ter um bichinho é ter um grande amigo para te
             acompanhar
             em todas as aventuras.</p>
@@ -1758,8 +1720,8 @@
       <div class="card bg-light mb-3;card border-info"
         style="max-width: 20rem;border-radius: 20px;margin-right: 50px; height: 80%;">
         <div class="text-card">
-          <h3 class="card-title">Animais estimulam a sociabilidade</h3>
-          <p class="card-text1">Se você é declaradamente antissocial, um pet pode te ajudar a resolver uma parte
+          <p class="card-title" style="font-size: 20px;"><b>Animais estimulam a sociabilidade</b></p>
+          <p class="card-text1" style="font-size: 14.3px;">Se você é declaradamente antissocial, um pet pode te ajudar a resolver uma parte
             desse
             problema. Estudos mostram que os animais,
             principalmente os cães, fazem com que você se torne mais ativo, saia mais de casa e conviva mais com
@@ -1769,9 +1731,9 @@
       </div>
       <div class="card bg-light mb-3;card border-info"
         style="max-width: 20rem; border-radius: 20px;margin-right: 50px; height: 80%;">
-        <div class="text-card">
-          <h3 class="card-title">Adoção salva a vida de um animal</h3>
-          <p class="card-text1">Adotar um animal é uma grande responsabilidade, e não é só porque você precisará
+        <div class="text-card" >
+          <p class="card-title" style="font-size: 18px; "><b>Adoção salva a vida de um animal</b></p>
+          <p class="card-text1" style="font-size: 14px;">Adotar um animal é uma grande responsabilidade, e não é só porque você precisará
             cuidar
             dele em casa. A adoção é capaz de salvar a vida
             de um bichinho que poderia estar nas ruas, abandonado, morrendo de fome e possivelmente sofrendo de maus
@@ -1781,7 +1743,7 @@
       <div class="card bg-light mb-3;card border-info"
         style="max-width: 20rem; border-radius: 20px;margin-right: 50px; height: 80%;">
         <div class="text-card">
-          <h3 class="card-title">Quem vive com pet tem menos estresse</h3>
+          <p class="card-title" style="font-size: 20px;"><b>Quem vive com pet tem menos estresse</b></p>
           <p class="card-text1">Pesquisas feitas na Universidade da Virgínia, nos EUA, concluíram que pessoas que
             convivem com animais são menos
             estressadas e ansiosas do que as que moram sozinhas.</p>
@@ -1790,7 +1752,7 @@
       <div class="card bg-light mb-3;card border-info"
         style="max-width: 20rem; border-radius: 20px;margin-right: 50px; height: 80%;">
         <div class="text-card">
-          <h3 class="card-title">Animais ajudam a desenvolver responsabilidade</h3>
+          <p class="card-title" style="font-size: 18px;"><b> Animais ajudam a desenvolver responsabilidade</b></p>
           <p class="card-text1">Um pet ajuda você a ser mais responsável. Como os bichinhos precisam de constante
             cuidado
             com água, alimentação, exercícios e higiene, o cuidador cria noções de
@@ -1805,18 +1767,16 @@
   <section id="Sobre"></section>
 
   <div class="lg:py-10 py-5"
-    style="background-color:snow; text-align: center;max-width: 1000px;margin: auto;margin-top: 100px;">
-    <h1 class="title-lg" style="font-size:40px">Sobre nós</h1>
+    style= "background-color: snow;;text-align: center;max-width: 1000px;margin: auto;margin-top: 100px;">
+    <h1 class="title-lg" style="font-size:35px">Sobre nós</h1>
     <p class="mt-3 sm:mt-4">
     </p>
     <div class="text-xl text-gray-500"
-      style="font-size: 20px; text-align: justify; padding-right: 100px; padding-left: 100px;"> Pet Space é um site
-      para adoção e doação de animais,
-      onde os pets divulgados no site serão disponibilizados
-      por usuários.
-      <p></p>Nos criamos a Pet Space com o intuito de oferecer aos pets um lar e para aquelas pessoas que nao tem
+      style="font-size: 19px; text-align: justify; padding-right: 100px; padding-left: 100px;"> Pet Space é uma ONG que visa a adoção e doação de animais,
+      onde os diversos pets serão divulgados no site.
+      <p></p>A Pet Space possui com o intuito de oferecer aos pets um lar e para aquelas pessoas que nao tem
       condições de
-      cuidar de algum pet agora criamos um aplicativo para ajuda-lo
+      cuidar de algum pet agora criamos um site para ajuda-lo
       <p></p>Este é um projeto desenvolvido por um grupo de 5 desenvolvedores para ajudar clientes que se comovem com a situação dos animais em
       que
       a grande maioria deles estão nas ruas abandonados e isso fez com que nós tomassemos a iniciativa para criamos
@@ -1827,12 +1787,13 @@
     </div>
   </div>
 
-  <div class="lg:py-10 py-5" style="background-color:snow; text-align: center;max-width: 1000px;margin: auto;">
-    <h1 class="title-lg" style="font-size:40px">Nossa missão</h1>
-    <p class="mt-3 sm:mt-4">
-    </p>
+ 
+
+  <div class="lg:py-10 py-5" style="background-color: snow; text-align: center;max-width: 1000px;margin: auto;">
+    <h1 class="title-lg" style="font-size:35px">Nossa missão</h1>
+    
     <div class="text-xl text-gray-500"
-      style="font-size: 20px; text-align: justify; padding-right: 100px; padding-left: 100px;">
+      style="font-size: 19px; text-align: justify; padding-right: 100px; padding-left: 100px;">
       A nossa missão é fornecer uma plataforma online que facilite o encontro de animais em busca de um lar
       permanente e pessoas interessadas em adotar ou doar um animal de estimação. O objetivo principal é promover o
       bem-estar dos animais, ajudando-os a encontrar um lar amoroso e responsável, ao mesmo tempo em que
@@ -1849,12 +1810,14 @@
     </div>
   </div>
 
+
+
   <div class="lg:py-10 py-5" style="background-color:snow; text-align: center;max-width: 1000px;margin: auto;">
-    <h1 class="title-lg" style="font-size:40px">Como funciona</h1>
+    <h1 class="title-lg" style="font-size:35px">Como funciona</h1>
     <p class="mt-3 sm:mt-4">
     </p>
     <div class="text-xl text-gray-500"
-      style="font-size: 20px; text-align: justify; padding-right: 100px; padding-left: 100px;">Nós não temos
+      style="font-size: 19px; text-align: justify; padding-right: 100px; padding-left: 100px;">Nós não temos
       abrigos,
       e nem fazemos resgates de animais!
       Nosso trabalho é 100% online, oferecendo visibilidade aos animaizinhos que precisam de um lar. Funciona assim:
@@ -1874,38 +1837,34 @@
     </div>
   </div>
 
+
+
   <div class="lg:py-10 py-5"
-    style="background-color:snow; text-align: center;max-width: 1000px;margin: auto;margin-bottom: 50px;">
-    <h1 class="title-lg" style="font-size:40px">Quer divulgar um cão ou gato para adoção?</h1>
-    <p class="mt-3 sm:mt-4">
-    </p>
+    style="background-color:snow; text-align: center;max-width: 1000px; margin: auto; margin-bottom: 50px;">
+    <h1 class="title-lg" style="font-size: 33px">Quer divulgar um cão ou gato para adoção?</h1>
+    
     <div class="text-xl text-gray-500"
-      style="font-size: 20px; text-align: justify; padding-right: 100px; padding-left: 100px;">
-      Se você está dando lar temporário ou quer divulgar um animal para adoção, faça seu cadastro no site e, em
-      seguida,
-      publique o bichinho. Coloque o máximo de características e fotos sobre ele: assim você aumenta as chances de
-      encontrar alguém que realmente combine com seu perfil, ajudando a evitar decepção e futuros abandonos. Pelo
-      mesmo
-      motivo, seja sincero quanto ao estado de saúde e características do animal.
+      style="font-size: 19px; text-align: justify; padding-right: 100px; padding-left: 100px;">
+      Se você está dando lar temporário ou quer divulgar um animal para adoção, entre em contato com a PetSpace, nós iremos publicar o bichinho. 
+      Encontraremos alguém que realmente combine com o pet, assim ajudando a evitar decepção e futuros abandonos. .
       <p></p>Importante: este é um site de adoção e a venda de animais é proibida, ok? Usuários que tentarem vender
       animais serão banidos do site.
          </div>
   </div>
+  
 
 
   <div class="lg:py-10 py-5" style="background-color:snow; text-align: center; height: 500px;">
-    <h1 class="title-lg" style="font-size: 50px;">Parcerias</h1>
-    <p class="mt-3 sm:mt-4">
-    </p>
-    <div class="text-xl text-gray-500" style="font-size: 30px;">Algumas das ONGs que já estão fazendo parceria
+    <h1 class="title-lg" style="font-size: 45px;">Parcerias</h1>
+    <div class="text-xl text-gray-500" style="font-size: 25px; padding-bottom: 30px;">Algumas das ONGs que fazem parceria
       conosco:
     </div>
-    <div class="text-xl text-gray-500" style="font-size: 30px;"></div>
-
+   
+    
 
 
     <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel"
-      style="display:flexbox; overflow-x: hidden ; ">
+      style="display:flexbox;">
 
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -1916,7 +1875,7 @@
       <div class="carousel-inner1" style="display: flex; justify-content: center; align-items: center; margin-bottom: 50px;">
         <div class="carousel-item active">
           <img class="" src="../Imagens/ONG_1.jpg" alt="Primeiro Slide"
-            style="border-radius: 20%; margin-left: 30px;margin-right: 30px;border: solid;">
+            style="border-radius: 20%; margin-left: 30px;margin-right: 30px; width: 300px;;border: solid;">
           <img class="" src="../Imagens/ONG_2.jpg" alt="Segundo Slide"
             style="border-radius: 20%; margin-right: 30px;border: solid">
           <img class="" src="../Imagens/ONG_3.jpg" alt="Terceiro Slide"
@@ -1936,7 +1895,7 @@
           <img class="" src="../Imagens/ONG_8.jpg" alt="Segundo Slide"
             style="border-radius: 20%; margin-right: 30px;border: solid">
           <img class="" src="../Imagens/ONG_9.jpg" alt="Terceiro Slide"
-            style="border-radius: 20%; margin-right: 30px;border: solid">
+            style="border-radius: 20%; margin-right: 30px; border: solid; ">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
@@ -1950,16 +1909,14 @@
     </div>
     
     
-  <footer class="bg-dark text-light" style="font-size: 20px; margin-top: 20px; height: 50px;">
-    
-    <div class="text-center">
-      <p>Somos uma organização que busca mudar a vida de varios pets e de várias pessoas.</p>
-    </div>
+  <footer class="text-center1" style="font-size: 20px;
+  background-color: #333; 
+  padding-top: 50px; 
+  height: 150px; color: #ffffff;">
 
-    <div class="text-center1" style="background-color: #333; padding-top: 50px; height: 150px;">
-      Pet Space Copyright © 2022 - 2023.<p> © Todos os direitos reservados - Somos a PetSpace. Desde 2022 no mercado.</p>
-    </div>
-    </div>
+
+      Pet Space Copyright © 2022 - 2023.</br>
+      © Todos os direitos reservados - Desde 2022 no mercado.
   </footer>
     
     

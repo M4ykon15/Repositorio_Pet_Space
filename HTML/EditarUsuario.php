@@ -47,7 +47,7 @@
     <title>Pet Space</title>
 
 </head>
-  <body> 
+  <body style="background-color: gray"> 
     <div class="principal">
 
        

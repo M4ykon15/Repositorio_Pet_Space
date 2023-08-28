@@ -9,13 +9,14 @@ $email = $_POST ['email'];
 $senha = $_POST ['senha'];
 $telefone = $_POST ['telefone'];
 $cpf = $_POST ['cpf'];
+$nivel_acesso = $_POST[0];
 
 // $result = mysqli_query($conexao, 
 // "INSERT INTO usuarios (nome, email, senha, telefone, cpf) 
 // VALUES('$nome', '$email', '$senha', '$telefone', '$cpf')");
 
 if (preg_match('/^.{5,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)) {
-  $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha, telefone, cpf) VALUES ('$nome', '$email', '$senha', '$telefone', '$cpf')");
+  $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha, telefone, cpf, nivel_acesso) VALUES ('$nome', '$email', '$senha', '$telefone', '$cpf', 0)");
   header('Location: ../HTML/Login.php');
 } else {
   header('Location: ../HTML/Cadastrar.php');
@@ -31,33 +32,38 @@ if (preg_match('/^.{5,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)
     <link rel="shortcut icon" href="../Imagens/icon_pata.ico" type="image/x-icon">
     
     
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/Cadastrar.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      
     <title>Pet Space</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/Cadastrar.css">   
+    
 </head>
   <body> 
-    <div class="principal">
     
-        <div class="container-E">
-        </div>
-
-       <div class="container-D">
+  
+  <div class="principal">
+    
 
          <div class="div1">
             <a href="../HTML/PetSpace.html">
               <img id="img1" src="../Imagens/voltar.png">
-              <button id="btn1"> Voltar para o início</button>
+              
             </a>
            </div>
-
-
-         <div class='container'>
-          <div id='msgError'></div>
+           
+           
+           
+           
+        
+        
+           <div class='container'>
+           <img id="img2" src="../Imagens/cadastro.png">
+         
+         
             <div class='card'>
+           
               <h1> CADASTRAR </h1>
               
               
@@ -95,6 +101,10 @@ if (preg_match('/^.{5,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)
                         <label class="letra" id="labelCpf" for="cpf">CPF</label>
                      </div>
 
+                     <div class="label-float" style="display: none;">
+                        <input disabled value="0"  class="texto" type="text" name="nivel_acesso" id="nivel_acesso" placeholder=" " required>
+                        <label class="letra" id="labelAcesso" for="Acesso">Acesso</label>
+                     </div>
                     
                       
                       <div class='justify-center'>
@@ -114,11 +124,10 @@ if (preg_match('/^.{5,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)
           
               
             </div>
-            </div>
+           
 
-            
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="../JS/Cadastrar.js"></script>
+            <script src="../JS/Cadastrar.js"></script>
+    
 
 </body>
 </html>

@@ -48,9 +48,8 @@ nome.addEventListener('keyup', () => {
     labelNome.innerHTML = 'Nome (Insira um nome válido, sem números)'
     nome.setAttribute('style', 'border-color: red')
     validNome = false
-  } else if (nomeSemEspacos.length <= 4) {
+  } else if (nomeSemEspacos.length < 3) {
     labelNome.setAttribute('style', 'color: red')
-    labelNome.innerHTML = 'Nome (Insira no mínimo 5 caracteres)'
     nome.setAttribute('style', 'border-color: red')
     validNome = false
   } else {
@@ -64,9 +63,10 @@ nome.addEventListener('keyup', () => {
 
 
 email.addEventListener('keyup', () => {
-  if(email.value.length<= 5 || !email.value.includes('@yahoo.com') && !email.value.includes('@gmail.com')){
+if(email.value.length<= 9 || !email.value.includes('@yahoo.com') && !email.value.includes('@gmail.com') && !email.value.includes('@outlook.com') 
+  && !email.value.includes('@protonmail.com') && !email.value.includes('@aol.com')){
     labelEmail.setAttribute('style', 'color: red')
-    labelEmail.innerHTML = 'Preencha com @gmail.com ou @yahoo.com'
+    labelEmail.innerHTML = 'Email Preencha com algum dominio'
     email.setAttribute('style', 'border-color: red')
     validEmail = false
   } else {
@@ -126,7 +126,7 @@ cpf.addEventListener('keyup', () => {
 senha.addEventListener('keyup', () => {
   if(senha.value.length <= 5){
     labelSenha.setAttribute('style', 'color: red')
-    labelSenha.innerHTML = 'Senha *Insira no minimo 6 caracteres'
+    labelSenha.innerHTML = 'Senha Insira no minimo 6 caracteres'
     senha.setAttribute('style', 'border-color: red')
     validSenha = false
   } else {

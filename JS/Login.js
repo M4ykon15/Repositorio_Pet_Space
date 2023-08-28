@@ -10,17 +10,21 @@ let labelSenha = document.querySelector('#labelSenha')
 let validSenha = false
 
 
-let btn = document.querySelector('.fa-eye')
+let btn = document.querySelector('#eyeIcon');
 
-btn.addEventListener('click', ()=>{
-  let inputSenha = document.querySelector('#senha')
-  
-  if(inputSenha.getAttribute('type') == 'password'){
-    inputSenha.setAttribute('type', 'text')
+btn.addEventListener('click', () => {
+  let inputSenha = document.querySelector('#senha');
+
+  if (inputSenha.getAttribute('type') === 'password') {
+    inputSenha.setAttribute('type', 'text');
+    btn.classList.remove('fa-eye');
+    btn.classList.add('fa-eye-slash');
   } else {
-    inputSenha.setAttribute('type', 'password')
+    inputSenha.setAttribute('type', 'password');
+    btn.classList.remove('fa-eye-slash');
+    btn.classList.add('fa-eye');
   }
-})
+});
 
 
   email.addEventListener('keyup', () => {

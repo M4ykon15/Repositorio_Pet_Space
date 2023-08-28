@@ -14,7 +14,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($SESSION['senha']) == true))
   $logado = $_SESSION['email'];
   
 
-  $sql = "SELECT * FROM usuarios WHERE nivel_acesso = 1";
+  $sql = "SELECT * FROM usuarios ORDER BY id ASC";
 
   $result = $conexao -> query($sql);
 
@@ -57,7 +57,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($SESSION['senha']) == true))
 <a href="../HTML/Doar.php" class="btn" style="background-color: #90EE90 ;color: #000000; font: size 10px; margin-left: 20px;margin-top: 25px;">Cadastrar pets</a>
 
 
-<h4 style="margin-top: 20px; margin-bottom: -20px; margin-left: 25px">Cadastrados:</h4>
+<h4 style="margin-top: 20px; margin-bottom: -20px; margin-left: 25px">Usúarios:</h4>
 <div class="m-5 ">
   <table class="table table-bg">
     <thead>

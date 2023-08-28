@@ -42,13 +42,26 @@
 
 
  
-  <!-- <nav class="nav" style="z-index: 999; background-color: #000;    width: 100%;  height: 90px;  position: fixed;  line-height: 65px;  text-align: center";>
+  <nav class="nav" style="z-index: 999; background-color: #000;    width: 100%;  height: 75px;  position: fixed;  line-height: 65px;  text-align: center; padding-top: 12px;">
    
     <div class="container">
       
       <div class="logo">
         <a href="#">PET SPACE</a>
       </div>
+
+
+      <div id="mainListDiv" class="main_list">
+        <ul class="navlinks">
+          
+          <li><a href="#Sobre" style="font-size: 30px;">Mais informações</a></li>
+          
+          
+          
+        </ul>
+      </div>
+
+
       <a href="../HTML/Login.php">
         <button type="button-entrar" class="btn btn-outline-light btn-lg" data-toggle="modal" style="margin-right: 10px;font-size: 15px;"
           data-target="#Login">Entrar</button>
@@ -64,17 +77,10 @@
 
 
 
-      <div id="mainListDiv" class="main_list">
-        <ul class="navlinks">
-          
-          <li><a href="#Sobre" style="font-size: 30px;">Sobre nós</a></li>
-          
-          
-        </ul>
-      </div>
+      
       
     </div>
-  </nav> -->
+  </nav>
 
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="padding-top: 75px;">
     <ol class="carousel-indicators">
@@ -108,45 +114,35 @@
   </section>
 
 
-  <script>
-    $(window).scroll(function () {
-      if ($(document).scrollTop() > 50) {
-        $('.nav').addClass('affix');
-        console.log("OK");
-      } else {
-        $('.nav').removeClass('affix');
-      }
-    });
-  </script>
-
+  
   </nav>
 
 
 
   <div class="lg:py-10 py-5" style="background-color:snow; text-align: center; ">
-    <h1 class="title-lg" style="font-size: 50px;">Novos peludos por aqui</h1>
+    <h1 class="title-lg" style="font-size: 40px;">Novos peludos por aqui</h1>
     <p class="mt-3 sm:mt-4">
     </p>
     <div class="text-xl text-gray-500" style="font-size: 30px;">Nosso site está cheio de doguinhos e gatinhos ansiosos
       por uma família.</div>
-    <section id="Adotar"></section>
+
     <div class="text-xl text-gray-500" style="font-size: 30px;">Vem ver!</div>
 
-    <p></p>
+ 
   </div>
 
 
   <div class="card-container">
 
     <div class="card">
-      <img class="card-img-top" src="../Imagens/dog_9.webp" alt="" height="300" width="300">
+      <img class="card-img-top" src="../Imagens/dog_9.webp" alt="" height="300px" width="300px">
       <div class="card-body">
         <h2 class="card-title">Thor <span class="material-symbols-outlined"
             style="float:right;font-size: 40px; color:darkblue;">male</span></h2>
         <p class="card-text">São Paulo-SP</p>
        
-          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-            data-target="#Adotar1">Mais informações</button>
+          <button  type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+            data-target="#Adotar1"  style="margin-left: 15%;"  >Mais informações</button>
         
         <!-- Modal -->
         <div class="modal fade" id="Adotar1" tabindex="-1" role="dialog" aria-labelledby="Adotar2" aria-hidden="true">
@@ -165,9 +161,22 @@
                 <div class="col-md-4">
                   <img src="../Imagens/dog_9.webp" class="img-fluid rounded-start"
                     style="border-radius: 20px;width: 50rem; margin-left: 5%;">
-                  <div>
-                    <h3 class="card-title1" style="text-align: center; margin-top: 10px;color: #00ff00">
-                      Características:</h3>
+                  
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <p class="card-text">
+                    
+                      
+                    
+                    <h4 class="card-title" style="color: #00ff00">Raça:</h4>
+                    <h4 class="card-text">Russill</h4>
+
+                    <h4 class="card-title" style="color: #00ff00">Idade:</h4>
+                    <h4 class="card-text"> 6 meses</h4>
+
+                    <h4 class="card-title1" style="margin-top: 10px;color: #00ff00">
+                      Características:</h4>
                     <h4 class="card-text1" style="margin: 10px;">
                       Docíl
                       <br>
@@ -178,21 +187,6 @@
 
                       
                     </h4>
-                  </div>
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <p class="card-text">
-                    
-
-                    
-                    <h3 class="card-title" style="color: #00ff00">Raça:</h3>
-                    <h4 class="card-text">  sla </h4>
-
-                    <h3 class="card-title" style="color: #00ff00">Idade:</h3>
-                    <h4 class="card-text"> 6 meses</h4>
-
-
 
                     
 
@@ -225,7 +219,7 @@
         <p class="card-text">São Paulo-SP</p>
      
           <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-            data-target="#Adotar2">Mais informações</button>
+            data-target="#Adotar2" style="margin-left: 15%;">Mais informações</button>
   
         <!-- Modal -->
         <div class="modal fade" id="Adotar2" tabindex="-1" role="dialog" aria-labelledby="Adotar2" aria-hidden="true">
@@ -261,8 +255,7 @@
                 <div class="col-md-8">
                   <div class="card-body">
                     <p class="card-text">
-                    <h3 class="card-title" style="color: #00ff00">Doador:</h3>
-                    <h4 class="card-text">Focinho Amigo</h4>
+                    
 
                     
 
@@ -297,7 +290,7 @@
         <p class="card-text">São Paulo-SP</p>
       
           <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-            data-target="#Adotar3">Mais informações</button>
+            data-target="#Adotar3" style="margin-left: 15%;">Mais informações</button>
         
         <div class="modal fade" id="Adotar3" tabindex="-1" role="dialog" aria-labelledby="Adotar2" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -331,8 +324,7 @@
                 <div class="col-md-8">
                   <div class="card-body">
                     <p class="card-text">
-                    <h3 class="card-title" style="color: #00ff00">Doador:</h3>
-                    <h4 class="card-text">Ação Animal</h4>
+                    
 
                    
                     <h3 class="card-title" style="color: #00ff00;">Raça:</h3>
@@ -364,7 +356,7 @@
         <p class="card-text" style="font-size: 15px;">São Paulo-SP</p>
         
           <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-            data-target="#Adotar4">Mais informações</button>
+            data-target="#Adotar4" style="margin-left: 15%;">Mais informações</button>
         
         <div class="modal fade" id="Adotar4" tabindex="-1" role="dialog" aria-labelledby="Adotar4" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -434,19 +426,43 @@
       </div>
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="card">
-      <img class="card-img-top" src="../Imagens/dog_10.jpg" alt="" height="300" width="300">
+      <img class="card-img-top" src="../Imagens/dog_10.jpg" alt="" height="300px" width="300px">
       <div class="card-body">
-        <h2 class="card-title">Snoopy <span class="material-symbols-outlined"
-            style="float:right;font-size: 40px; color:darkblue;">
-            male
-          </span></h2>
+        <h2 class="card-title">Snoopey<span class="material-symbols-outlined"
+            style="float:right;font-size: 40px; color:darkblue;">male</span></h2>
         <p class="card-text">Sorocaba-SP</p>
+       
+          <button  type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+            data-target="#Adotar1" style="margin-left: 15%;">Mais informações</button>
         
-          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-            data-target="#Adotar5">Mais informações</button>
-        
-        <div class="modal fade" id="Adotar5" tabindex="-1" role="dialog" aria-labelledby="Adotar2" aria-hidden="true">
+        <!-- Modal -->
+        <div class="modal fade" id="Adotar1" tabindex="-1" role="dialog" aria-labelledby="Adotar2" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -462,46 +478,49 @@
                 <div class="col-md-4">
                   <img src="../Imagens/dog_10.jpg" class="img-fluid rounded-start"
                     style="border-radius: 20px;width: 50rem; margin-left: 5%;">
-                  <div>
-                    <h3 class="card-title" style="text-align: center; margin-top: 10px;color: #00ff00">
-                      Características:</h3>
-                    <h4 class="card-text" style="margin: 10px;">
-                      Docíl
-                      <br>
-                      Brincalhão
-                      <br>
-                      Vive bem e casa com quintal
-                      
-                    </h4>
-                  </div>
+                  
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
                     <p class="card-text">
                     
+                      
+                    
+                    <h4 class="card-title" style="color: #00ff00">Raça:</h4>
+                    <h4 class="card-text">Bulldog</h4>
 
-                    <h3 class="card-title" style="color: #00ff00;">Raça:</h3>
-                    <h4 class="card-text"> </h4>
-
-                    <h3 class="card-title" style="color: #00ff00">Idade:</h3>
+                    <h4 class="card-title" style="color: #00ff00">Idade:</h4>
                     <h4 class="card-text"> 4 meses</h4>
 
+                    <h4 class="card-title1" style="margin-top: 10px;color: #00ff00">
+                      Características:</h4>
+                    <h4 class="card-text1" style="margin: 10px;">
+                      Docíl
+                      <br>
+                      Brincalhão
+                      <br>
+                      Sociavel
+                      <br>
 
+                      
+                    </h4>
 
                     
-                    </p>
+
 
                   </div>
                 </div>
               </div>
+
+
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Fechar</button>
 
                 
 
-                </div>
-                </div>
+              
+
               </div>
             </div>
           </div>
@@ -512,16 +531,15 @@
     <div class="card">
       <img class="card-img-top" src="../Imagens/dog_11.jpeg" alt="" height="300" width="300">
       <div class="card-body">
-        <h2 class="card-title">Faisca <span class="material-symbols-outlined"
-            style="float:right;font-size: 40px; color:darkblue;">
-            male
-          </span></h2>
+        <h2 class="card-title">Felix <span class="material-symbols-outlined"
+            style="float:right;font-size: 40px; color:darkblue;">male</span></h2>
         <p class="card-text">São Paulo-SP</p>
-        
+     
           <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-            data-target="#Adotar6">Mais informações</button>
-        
-        <div class="modal fade" id="Adotar6" tabindex="-1" role="dialog" aria-labelledby="Adotar6" aria-hidden="true">
+            data-target="#Adotar2" style="margin-left: 15%;">Mais informações</button>
+  
+        <!-- Modal -->
+        <div class="modal fade" id="Adotar2" tabindex="-1" role="dialog" aria-labelledby="Adotar2" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -530,13 +548,15 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="dados" style="text-align: center;margin-bottom: 10px;">
-                <h2>Cachorro / Macho / Porte Pequeno</h2>
+
+
+              <div class="dados">
+                <h2>Cachorro / Macho / Porte pequeno</h2>
               </div>
               <div class="row g-0">
                 <div class="col-md-4">
                   <img src="../Imagens/dog_11.jpeg" class="img-fluid rounded-start"
-                    style="border-radius: 20px;width: 50rem; margin-left: 5%; ">
+                    style="border-radius: 20px;width: 50rem; margin-left: 5%;">
                   <div>
                     <h3 class="card-title" style="text-align: center; margin-top: 10px;color: #00ff00">
                       Características:</h3>
@@ -546,36 +566,30 @@
                       Brincalhão
                       <br>
                       Sociavel
-                                          </h4>
+                        </h4>
                   </div>
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
                     <p class="card-text">
+                    <
+
                     
 
                     <h3 class="card-title" style="color: #00ff00;">Raça:</h3>
-                    <h4 class="card-text"> </h4>
+                    <h4 class="card-text"> Caramelo</h4>
 
                     <h3 class="card-title" style="color: #00ff00">Idade:</h3>
-                    <h4 class="card-text"> 2 anos</h4>
-
-
-
-                    >
-                    </p>
+                    <h4 class="card-text"> 8 meses </h4>
 
                   </div>
                 </div>
               </div>
 
-
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Fechar</button>
 
-                
 
-                </div>
               </div>
             </div>
           </div>
@@ -586,16 +600,16 @@
     <div class="card">
       <img class="card-img-top" src="../Imagens/dog_12.JPG" alt="" height="300" width="300">
       <div class="card-body">
-        <h2 class="card-title">Snow <span class="material-symbols-outlined"
+        <h2 class="card-title">Bolinha <span class="material-symbols-outlined"
             style="float:right;font-size: 40px; color:darkblue;">
             male
           </span></h2>
-        <p class="card-text">Sorocaba-SP</p>
-        
+        <p class="card-text">São Paulo-SP</p>
+      
           <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-            data-target="#Adotar7">Mais informações</button>
+            data-target="#Adotar3" style="margin-left: 15%;">Mais informações</button>
         
-        <div class="modal fade" id="Adotar7" tabindex="-1" role="dialog" aria-labelledby="Adotar2" aria-hidden="true">
+        <div class="modal fade" id="Adotar3" tabindex="-1" role="dialog" aria-labelledby="Adotar2" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -604,7 +618,8 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="dados" style="text-align: center;margin-bottom: 10px;">
+
+              <div class="dados">
                 <h2>Cachorro / Macho / Porte médio</h2>
               </div>
               <div class="row g-0">
@@ -615,38 +630,30 @@
                     <h3 class="card-title" style="text-align: center; margin-top: 10px;color: #00ff00">
                       Características:</h3>
                     <h4 class="card-text" style="margin: 10px;">
-                      Docíl
-                      <br>
                       Brincalhão
                       <br>
+                      Carente
+                      <br>
                       Calmo
-                    </h4>
+                     </h4>
                   </div>
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
                     <p class="card-text">
-                    
-
+                                       
                     <h3 class="card-title" style="color: #00ff00;">Raça:</h3>
-                    <h4 class="card-text"> </h4>
+                    <h4 class="card-text"> Rotwille</h4>
 
                     <h3 class="card-title" style="color: #00ff00">Idade:</h3>
-                    <h4 class="card-text"> 1 anos</h4>
-
-                    </p>
-
+                    <h4 class="card-text"> 1 ano</h4>
                   </div>
                 </div>
               </div>
 
+
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Fechar</button>
-
-                
-
-                
-                </div>
               </div>
             </div>
           </div>
@@ -661,12 +668,12 @@
             style="float:right;font-size: 40px; color:deeppink">
             female
           </span></h2>
-        <p class="card-text">Rio de janeiro-RJ</p>
-       
+        <p class="card-text" style="font-size: 15px;">São Paulo-SP</p>
+        
           <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-            data-target="#Adotar8">Mais informções</button>
-      
-        <div class="modal fade" id="Adotar8" tabindex="-1" role="dialog" aria-labelledby="Adotar2" aria-hidden="true">
+            data-target="#Adotar4" style="margin-left: 15%;">Mais informações</button>
+        
+        <div class="modal fade" id="Adotar4" tabindex="-1" role="dialog" aria-labelledby="Adotar4" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -675,7 +682,8 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="dados" style="text-align: center;margin-bottom: 10px;">
+
+              <div class="dados">
                 <h2>Cachorro / Fêmea / Porte Pequeno</h2>
               </div>
               <div class="row g-0">
@@ -688,9 +696,10 @@
                     <h4 class="card-text" style="margin: 10px;">
                       Docíl
                       <br>
-                      Brincalhão
+                                                                 Sociavel
                       <br>
                       Carente
+                      
                     </h4>
                   </div>
                 </div>
@@ -698,33 +707,33 @@
                   <div class="card-body">
                     <p class="card-text">
                     
+
+                    
+
                     <h3 class="card-title" style="color: #00ff00;">Raça:</h3>
-                    <h4 class="card-text"> yorkshire</h4>
+                    <h4 class="card-text"> </h4>
 
                     <h3 class="card-title" style="color: #00ff00">Idade:</h3>
-                    <h4 class="card-text"> 2 anos</h4>
+                    <h4 class="card-text"> 5 meses</h4>
 
 
+
+                    
                     </p>
 
                   </div>
                 </div>
               </div>
 
+
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Fechar</button>
 
                 
 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-
-    
+               
+                
+                
               </div>
             </div>
           </div>
@@ -733,28 +742,14 @@
     </div>
 
   </div>
-
-
-
-  <nav aria-label="Navegação de página exemplo">
-    <ul class="pagination justify-content-center pagination-lg" style="margin-top: 10px;margin-bottom: 30px;">
-      <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1">Anterior</a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#">Próximo</a>
-      </li>
-    </ul>
-  </nav>
-
-
-
+  <section id="Sobre"> </section>
   <div class="text-center" style="background-color: snow;font-size: 30px;text-align: center;">
-    <div class="title-adote">
+  
+    <div class="title-adote" style="margin-bottom: 50px;">
+     
       <h1>Porquê você deve adotar um bichinho: </h1>
+
+   
     </div>
     <div class="center-card" style="background-color: snow;font-size: 5px;text-align: center;">
       <div class="card bg-light mb-3; card border-info "
@@ -813,7 +808,7 @@
   </div>
 
 
-  <section id="Sobre"></section>
+
 
   <div class="lg:py-10 py-5"
     style= "background-color: snow;;text-align: center;max-width: 1000px;margin: auto;margin-top: 100px;">
@@ -860,34 +855,6 @@
   </div>
 
 
-
-  <div class="lg:py-10 py-5" style="background-color:snow; text-align: center;max-width: 1000px;margin: auto;">
-    <h1 class="title-lg" style="font-size:35px">Como funciona</h1>
-    <p class="mt-3 sm:mt-4">
-    </p>
-    <div class="text-xl text-gray-500"
-      style="font-size: 19px; text-align: justify; padding-right: 100px; padding-left: 100px;">Nós não temos
-      abrigos,
-      e nem fazemos resgates de animais!
-      Nosso trabalho é 100% online, oferecendo visibilidade aos animaizinhos que precisam de um lar. Funciona assim:
-      <p>
-      </p>
-      1- ONGs, protetores independentes ou pessoas que precisam doar um animal fazem o seu cadastro gratuitamente e
-      no
-      mesmo instante já podem publicar os animais com detalhes sobre suas características e personalidade;
-      <p></p>
-      2- Pessoas que estão interessadas em ter um novo bichinho vão entrar no site e procurar um que tenha a ver com
-      o
-      perfil dele;
-      <p></p>
-      3- Quando acharem aquele especial, elas clicam em “Adotar” e pronto, é só combinar com a ONG como buscar o
-      mais novo membro da família!
-
-    </div>
-  </div>
-
-
-
   <div class="lg:py-10 py-5"
     style="background-color:snow; text-align: center;max-width: 1000px; margin: auto; margin-bottom: 50px;">
     <h1 class="title-lg" style="font-size: 33px">Quer divulgar um cão ou gato para adoção?</h1>
@@ -912,7 +879,7 @@
     
 
 
-    <!-- <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel"
+    <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel"
       style="display:flexbox;">
 
       <ol class="carousel-indicators">
@@ -955,7 +922,7 @@
         <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
         <span class="sr-only">Próximo</span>
       </a>
-    </div> -->
+    </div>
     
     
   <footer class="text-center1" style="font-size: 20px; font-size: 20px;  background-color: #333;  color: #ffffff;  padding: 20px 0;
@@ -972,8 +939,7 @@
 
       
       <p style="font-size: 20px; margin-top: 50px;"> PetSpace Copyright © 2022 - 2023.
-      © Todos os direitos reservados - Desde 2022 no mercado. <a href="../HTML/LoginAdm.php"><button type="button-entrar" class="btn btn-dark" data-toggle="modal" style="margin-left: 35px ;font-size: 15px;color: #ffffff;"
-      data-target="#Login">Entrar</button></a></p>
+      © Todos os direitos reservados - Desde 2022 no mercado. </p>
       
   </footer>
     

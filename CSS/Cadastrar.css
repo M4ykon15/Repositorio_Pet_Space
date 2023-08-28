@@ -11,7 +11,8 @@ body {
   background-color: #32cd32;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed
+  background-attachment: fixed;
+  
   
 }
 
@@ -61,10 +62,7 @@ body {
     width: 400px;
     height: 590px;
     margin-top: 5%;
-   
     margin-left: 50%;
-  
-    position: absolute;
   }
   
   h1{
@@ -211,5 +209,5 @@ body {
   }
 
   .carouselExampleIndicators1{
-    
+
   }

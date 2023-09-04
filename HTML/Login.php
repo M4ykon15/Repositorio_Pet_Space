@@ -16,14 +16,18 @@
      
         <link rel="shortcut icon" href="../Imagens/icon_pata.ico" type="image/x-icon">
        
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../CSS/Login.css">
         
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        
+
+        <link rel="stylesheet" href="../CSS/Login.css">
         </head>
         
         
       <body>
-        
+      
    
           <div class="div_1">
             <a href="../HTML/PetSpace.html">
@@ -74,9 +78,8 @@
 
 
         
+          
+        
           <script src="../JS/Login.js"></script>
-
         </body>
-
-
 </html>

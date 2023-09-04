@@ -10,9 +10,7 @@ $senha = $_POST ['senha'];
 $telefone = $_POST ['telefone'];
 $cpf = $_POST ['cpf'];
 
-// $result = mysqli_query($conexao, 
-// "INSERT INTO usuarios (nome, email, senha, telefone, cpf) 
-// VALUES('$nome', '$email', '$senha', '$telefone', '$cpf')");
+
 
 if (preg_match('/^.{5,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)) {
   $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha, telefone, cpf) VALUES ('$nome', '$email', '$senha', '$telefone', '$cpf')");
@@ -34,7 +32,7 @@ if (preg_match('/^.{5,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     
-   <link rel="stylesheet" href="../CSS/Cadastrar.css">
+   
     
     
 
@@ -42,6 +40,8 @@ if (preg_match('/^.{5,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       
+    <link rel="stylesheet" href="../CSS/Cadastrar.css">
+
     <title>Pet Space</title>
 
 </head>

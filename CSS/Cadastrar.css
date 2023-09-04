@@ -81,7 +81,7 @@ body {
 #img2{
 
  width: 40%;
- height: 40%;
+ height: 15%;
  margin-top: 10%;
 
   position: absolute;
@@ -208,6 +208,4 @@ body {
     color:  #535553;
   }
 
-  .carouselExampleIndicators1{
-
-  }
+  

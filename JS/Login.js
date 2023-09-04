@@ -30,13 +30,12 @@ btn.addEventListener('click', () => {
   email.addEventListener('keyup', () => {
     if(email.value.length === 0 && (" ")) {
       labelEmail.setAttribute('style', 'color: red')
-    labelEmail.innerHTML = 'Preencha o email'
     email.setAttribute('style', 'border-color: red')
       return false;
     }
     if (!email.value.endsWith("@gmail.com") || email.value.length <= 5) {
       labelEmail.setAttribute('style', 'color: red');
-      labelEmail.innerHTML = 'Email ("Preencha com @gmail.com")';
+      labelEmail.innerHTML = 'Email';
       email.setAttribute('style', 'border-color: red');
       validEmail = false;
     } else {
@@ -57,11 +56,11 @@ btn.addEventListener('click', () => {
    }
 
      else if(senha.value.length <= 5 
-  // || !senha.value.includes('admin123')
+ 
   
   ){
       labelSenha.setAttribute('style', 'color: red')
-    //  labelSenha.innerHTML = 'Senha (Preencha com "admin123")'
+    
       senha.setAttribute('style', 'border-color: red')
        validSenha = false
     } else {
@@ -102,95 +101,3 @@ btn.addEventListener('click', () => {
     }
   }
   
-  
- function entrar() {
-  var email = document.getElementById('email').value;
-  var senha = document.getElementById('senha').value;
-
-  // Verificar se o email e a senha correspondem aos valores especiais
-  if (email === 'email@especial.com' && senha === 'senhaespecial') {
-    // Redirecionar para a tela de ADM
-    window.location.href = 'ADM.html';
-  }
-}
-
-// email.addEventListener('keyup', () => {
-//   if(email.value.length === 0 && (" ")) {
-//     labelEmail.setAttribute('style', 'color: red')
-//   labelEmail.innerHTML = 'Preencha o email'
-//   email.setAttribute('style', 'border-color: red')
-//     return false;
-//   }
-//   if ( email.value.length <= 5 || !email.value.endsWith("@gmail.com")) {
-//     labelEmail.setAttribute('style', 'color: red');
-//     labelEmail.innerHTML = 'Email ("Preencha com @gmail.com")';
-//     email.setAttribute('style', 'border-color: red');
-//     validEmail = false;
-//   } else {
-//     labelEmail.setAttribute('style', 'color: green');
-//     labelEmail.innerHTML = 'Email';
-//     email.setAttribute('style', 'border-color: green');
-//     validEmail = true;
-//   }
-  
-// })
-
-// senha.addEventListener('keyup', () => {
-//   if(senha.value.length === 0 && (" ")) {
-//     labelSenha.setAttribute('style', 'color: red')
-//   labelSenha.innerHTML = 'Preencha a senha '
-//   senha.setAttribute('style', 'border-color: red')
-//     return false;
-//  }
-
-//    else if(senha.value.length <= 5 
-// // || !senha.value.includes('admin123')
-
-// ){
-//     labelSenha.setAttribute('style', 'color: red')
-//   //  labelSenha.innerHTML = 'Senha (Preencha com "admin123")'
-//     senha.setAttribute('style', 'border-color: red')
-//      validSenha = false
-//   } else {
-//      labelSenha.setAttribute('style', 'color: green')
-//     labelSenha.innerHTML = 'Senha'
-//    senha.setAttribute('style', 'border-color: green')
-//     validSenha = true
-//    }
-//  })
-
-
-//  function entrar() {
-//   if (validEmail && validSenha) {
-//     if (email.value.trim() === '' || senha.value.trim() === '') {
-//       msgError.setAttribute('style', 'display: block')
-//       msgError.innerHTML = '<strong>Preencha todos os campos corretamente antes de cadastrar</strong>'
-//       msgSuccess.innerHTML = ''
-//       msgSuccess.setAttribute('style', 'display: none')
-//       return false;
-//     } else if (email.value === 'email@especial.com' && senha.value === 'senhaespecial') {
-//       // Dados de login válidos, enviar para o banco de dados
-
-//       // Redirecionar para a outra tela
-//       window.location.href = 'ADM.html';
-//     } else {
-//       msgSuccess.setAttribute('style', 'display: block')
-//       msgSuccess.innerHTML = '<strong>Cadastrando usuário...</strong>'
-//       msgError.setAttribute('style', 'display: none')
-//       msgError.innerHTML = ''
-
-//       // Simulação do envio para o banco de dados (apenas para fins de exemplo)
-//       setTimeout(() => {
-//         // Redirecionar para a outra tela
-//         window.location.href = 'PetSpace.html';
-//       }, 3000);
-//     }
-//   } else {
-//     msgError.setAttribute('style', 'display: block')
-//     msgError.innerHTML = '<strong>Preencha todos os campos corretamente antes de entrar</strong>'
-//     msgSuccess.innerHTML = ''
-//     msgSuccess.setAttribute('style', 'display: none')
-//     return false;
-//   }
-// }
-

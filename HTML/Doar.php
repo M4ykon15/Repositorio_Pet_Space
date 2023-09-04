@@ -38,19 +38,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($SESSION['senha']) == true))
   <script type="text/javascript" src="../JS/Doar.js"></script>
   
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-    crossorigin="anonymous"></script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
@@ -66,7 +54,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($SESSION['senha']) == true))
   <div class="container-fluid" style="margin-top: 10px;">
     <!-- <a class="navbar-brand">Bem vindo ao Painel de Controle </a> -->
     <?php
-       echo"<h4> Bem Vindo, $logado</h4>";
+       echo"<h4> Olá, $logado</h4>";
         
     ?>
     
@@ -84,62 +72,54 @@ if((!isset($_SESSION['email']) == true) and (!isset($SESSION['senha']) == true))
 
   
       <label for="nome_pet" style="font-size: 20px;">Nome do Pet:</label>
-      <input type="text" id="nome_pet" name="nome_pet" required><br>
+      <input type="text" id="nome_pet" name="nome_pet" placeholder="Ex: Atenas" required><br>
   
       <label for="sexo" style="font-size: 20px;">Sexo:</label>
-      <input type="text" id="sexo" name="sexo" style="padding-top: 10px;"   required>
+      <input type="text" id="sexo" name="sexo" style="padding-top: 10px;"  placeholder="Ex: Fêmea" required>
         
    
       <label for="especie"style="font-size: 20px;">Espécie:</label>
-      <input type="text"   id="especie" name="especie" onchange="exibirRacas()" required>
+      <input type="text"   id="especie" name="especie" placeholder="Ex: Cachorro"  required>
         
   
       <label for="raca"style="font-size: 20px;">Raça:</label>
-      <input type="text" id="raca" name="raca" required>
+      <input type="text" id="raca" name="raca" placeholder="Ex: Border Collie" required>
         
    
-      
-  
-  
       <label for="idade" style="font-size: 20px;">Idade:</label>
-      <input type="text" id="idade" name="idade" min="0" placeholder="Meses ou anos" required><br>
+      <input type="text" id="idade" name="idade" min="0" placeholder="Ex: 6 Meses " required><br>
 
    
       <label for="porte" style="font-size: 20px;">Porte:</label>
-      <input type="text"   id="porte" name="porte" required>
-       
-  
-      <label for="caracteristicas" style="font-size: 20px;">Características:</label><br>
-  
-      <input type="checkbox" id="docil" name="caracteristicas[]" value="Docil">
-      <label for="docil" style="font-size: 20px;">Dócil</label><br>
-  
-      <input type="checkbox" id="brincalhao" name="caracteristicas[]" value="Brincalhao">
-      <label for="brincalhao" style="font-size: 20px;">Brincalhão</label><br>
-  
-      <input type="checkbox" id="sociavel" name="caracteristicas[]" value="Sociavel">
-      <label for="sociavel" style="font-size: 20px;">Sociável</label><br>
-  
-  
-      <input type="checkbox" id="calmo" name="caracteristicas[]" value="Calmo">
-      <label for="calmo" style="font-size: 20px;">Calmo</label><br>
-  
+      <input type="text"   id="porte" name="porte" placeholder="Ex: Pequeno"  required>
       
-      <input type="checkbox" id="castrado" name="caracteristicas[]" value="Castrado">
-      <label for="castrado" style="font-size: 20px;" >Castrado</label><br>
-  
    
       <label for="imagem" style="font-size: 20px;">Foto do animal:</label><br>
-      <input type="file" id="input-foto" accept="image/*" onchange="mostrarFoto(event)">
-    
-    <img id="imagem" src="#" alt="Foto">
+
+      <img id="imagem" src="#" alt="Foto" style="margin-top: 20px;"></br>
+
+<input type="file" id="input-foto" accept="image/*" onchange="mostrarFoto(event)" style="margin-top: 20px;">
+</br>
 
 
-      <button type="submit" class="btn btn-success btn-lg" style="margin-bottom: 50px;">Enviar</button>
+<button type="submit" class="btn btn-success btn-lg" style="margin-top: 20px;">Enviar</button>
+
     </form>
   
 
-   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 
 </body>
 </html>

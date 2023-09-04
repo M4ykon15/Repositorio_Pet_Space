@@ -43,7 +43,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/Edit.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      
+    <link rel="stylesheet" href="../CSS/Edit.css">
     <title>Pet Space</title>
 
 </head>
@@ -61,7 +61,7 @@
 
 
          <div class='container'>
-          <div id='msgError'></div>
+          <!-- <div id='msgError'></div> -->
 
 
           
@@ -71,7 +71,7 @@
               <h2> Editar usuário </h2>
               
               
-              <div id='msgSuccess'></div>
+              <!-- <div id='msgSuccess'></div> -->
               
               <form method="POST" action="../saveEdit.php">
                       <div class="label-float">

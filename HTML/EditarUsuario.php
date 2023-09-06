@@ -1,35 +1,51 @@
+
+
+
+
 <?php
-    include_once('../dados.php');
+include_once('../dados.php');
 
-    if(!empty($_GET['id']))
-    {
-        $id = $_GET['id'];
-        $sqlSelect = "SELECT * FROM usuarios WHERE id=$id";
-        $result = $conexao->query($sqlSelect);
-        if($result->num_rows > 0)
-        {
-            while($user_data = mysqli_fetch_assoc($result))
-            {
-              
-              $nome = $user_data['nome'];
-              $email = $user_data['email'];
-              $senha = $user_data['senha'];
-              $telefone = $user_data['telefone'];
-              $cpf = $user_data['cpf'];
+if (!empty($_GET['id'])) {
+    $id = $_GET['id'];
 
+    // Defina as configurações da conexão com o banco de dados aqui
+    $serverName = "PetSpace.mssql.somee.com";
+    $databaseName = "PetSpace";
+    $uid = "CaioSilva_SQLLogin_1";
+    $pwd = "bj8g3g8o2r";
 
-            }
-        }
-        else
-        {
+    try {
+        $conn = new PDO("sqlsrv:Server=$serverName;Database=$databaseName", $uid, $pwd);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $sqlSelect = "SELECT * FROM usuarios WHERE id = :id";
+        $stmt = $conn->prepare($sqlSelect);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($row) {
+            $nome = $row['nome'];
+            $email = $row['email'];
+            $senha = $row['senha'];
+            $telefone = $row['telefone'];
+            $cpf = $row['cpf'];
+        } else {
             header('Location: ../HTML/ADM.php');
+            exit;
         }
+    } catch (PDOException $e) {
+        die("Erro na conexão: " . $e->getMessage());
     }
-    else
-    {
-        header('Location: ../HTML/ADM.php');
-    }
+} else {
+    header('Location: ../HTML/ADM.php');
+    exit;
+}
 ?>
+
+
+
 
 <!doctype html>
 <html lang="pt-br">
@@ -54,7 +70,7 @@
     <div class="div1">
             <a href="../HTML/ADM.php">
               <img id="img1" src="../Imagens/voltar.png">
-              <button id="btn1"> Voltar</button>
+              
             </a>
            </div>
       

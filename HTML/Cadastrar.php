@@ -1,25 +1,45 @@
-<?php
+ <?php
 
 if(isset($_POST['submit'])){
 
-include_once('../dados.php');
+    $nome = $_POST ['nome'];
+    $email = $_POST ['email'];
+    $senha = $_POST ['senha'];
+    $telefone = $_POST ['telefone'];
+    $cpf = $_POST ['cpf'];
 
-$nome = $_POST ['nome'];
-$email = $_POST ['email'];
-$senha = $_POST ['senha'];
-$telefone = $_POST ['telefone'];
-$cpf = $_POST ['cpf'];
+    // Defina as configurações da conexão com o banco de dados aqui
+    $serverName = "PetSpace.mssql.somee.com";
+    $databaseName = "PetSpace";
+    $uid = "CaioSilva_SQLLogin_1";
+    $pwd = "bj8g3g8o2r";
 
+    try {
+        $conn = new PDO("sqlsrv:Server= $serverName; Database = $databaseName", $uid, $pwd);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-
-if (preg_match('/^.{5,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)) {
-  $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha, telefone, cpf) VALUES ('$nome', '$email', '$senha', '$telefone', '$cpf')");
-  header('Location: ../HTML/Login.php');
-} else {
-  header('Location: ../HTML/Cadastrar.php');
+        if (preg_match('/^.{5,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)) {
+            $sql = "INSERT INTO usuarios (nome, email, senha, telefone, cpf) VALUES (:nome, :email, :senha, :telefone, :cpf)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':nome', $nome);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':senha', $senha);
+            $stmt->bindParam(':telefone', $telefone);
+            $stmt->bindParam(':cpf', $cpf);
+            $stmt->execute();
+            header('Location: ../HTML/Login.php');
+        } else {
+            header('Location: ../HTML/Cadastrar.php');
+        }
+    } catch (PDOException $e) {
+        die("Erro na conexão: " . $e->getMessage());
+    }
 }
-}
-  ?>
+
+?>
+
+
+
 
 <!doctype html>
 <html lang="pt-br">
@@ -29,14 +49,11 @@ if (preg_match('/^.{5,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)
     <link rel="shortcut icon" href="../Imagens/icon_pata.ico" type="image/x-icon">
     
     
-    
+ 
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    
-   
-    
-    
-
-
+     
+     
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       
@@ -59,8 +76,8 @@ if (preg_match('/^.{5,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)
 
   
            
-           <div class='container'>
-           <img id="img2" src="../Imagens/cadastro.png">
+           
+          
          
        
          
@@ -127,7 +144,7 @@ if (preg_match('/^.{5,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)
           
               
             </div>
-            </div>
+    </div>
 
             <script src="../JS/Cadastrar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

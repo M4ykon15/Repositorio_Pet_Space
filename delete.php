@@ -1,25 +1,32 @@
+
 <?php
+if (!empty($_GET['id'])) {
+    // Defina as configurações da conexão com o banco de dados aqui
+    $serverName = "PetSpace.mssql.somee.com";
+    $databaseName = "PetSpace";
+    $uid = "CaioSilva_SQLLogin_1";
+    $pwd = "bj8g3g8o2r";
 
-if(!empty($_GET['id']))
-{
+    try {
+        $conn = new PDO("sqlsrv:Server=$serverName;Database=$databaseName", $uid, $pwd);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  include_once('dados.php');
+        $id = $_GET['id'];
 
-  $id = $_GET['id'];
-  
-  $sqlSelect = "SELECT * FROM usuarios WHERE id = $id";
-  
-  $result = $conexao->query($sqlSelect);
-  
-  if ($result->num_rows > 0) 
-    {
-      $sqlDelete = "DELETE FROM usuarios WHERE id=$id";
-       $resultDelete = $conexao->query($sqlDelete);
+
+        if ($id != null ) {
+            $sqlDelete = "DELETE FROM usuarios WHERE id = :id";
+            $stmtDelete = $conn->prepare($sqlDelete);
+            $stmtDelete->bindParam(':id', $id);
+            $stmtDelete->execute();
+        }
+
+      
+    } catch (PDOException $e) {
+        die("Erro na conexão: " . $e->getMessage());
     }
-    
-   
-  }
- 
-  header('Location: ../Repositorio_Pet_Space/HTML/ADM.php');
+}
 
-  ?>
+header('Location: ../Repositorio_Pet_Space/HTML/ADM.php');
+
+?>

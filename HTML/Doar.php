@@ -17,6 +17,10 @@ if (isset($_POST['submit'])) {
         $conn = new PDO("sqlsrv:Server=$serverName;Database=$databaseName", $uid, $pwd);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+  
+        $imagem = file_get_contents($_FILES['foto']['tmp_name']);
+
+        $array = array($imagem);
         // Prepare uma consulta SQL para inserir os bytes no banco de dados
         $sqlA = "INSERT INTO animais (nome_pet, sexo, especie, raca, idade, porte, foto) VALUES (:nome_pet, :sexo, :especie, :raca, :idade, :porte, CONVERT(varbinary(max), :foto))";
         $stmtA = $conn->prepare($sqlA);
@@ -26,7 +30,7 @@ if (isset($_POST['submit'])) {
         $stmtA->bindParam(':raca', $raca);
         $stmtA->bindParam(':idade', $idade);
         $stmtA->bindParam(':porte', $porte);
-        $stmtA->bindParam(':foto', $arquivo_bytes, PDO::PARAM_LOB); 
+        $stmtA->bindParam(':foto', $array); 
 
         // Execute a consulta SQL
         $stmtA->execute();
@@ -34,25 +38,17 @@ if (isset($_POST['submit'])) {
         die("Erro na conexão: " . $e->getMessage());
     }
 
-       
-
-
-    // Verifique se o campo 'foto' foi enviado corretamente
-    if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
-        // Recupere os dados do formulário
-       
-        // Caminho temporário do arquivo
-        $arquivo_temp = $_FILES['foto']['tmp_name'];
-
-        // Leia o conteúdo do arquivo em um buffer de bytes
-        $arquivo_bytes = file_get_contents($arquivo_temp);
-
-         // Certifique-se de sair para evitar que o código continue sendo executado após o redirecionamento.
-       
          header("Location: ../HTML/ADM.php");
          exit();
     } else {
         echo "Erro no envio do arquivo ou tipo de arquivo não suportado.";
     }
-}
+
 ?>
+
+
+
+
+
+
+

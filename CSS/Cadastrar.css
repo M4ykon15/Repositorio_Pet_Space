@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #32cd32;
+  background: linear-gradient(to bottom, #32cd32, #00bb00);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -21,14 +21,8 @@ body {
   position: relative;
 }
 
-.principal{
-    
-  background-color: #32cd32;
-    height: 100vh;
-    display: flex;
-    position: relative;
-    
-}
+
+
 
 
 

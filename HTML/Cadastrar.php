@@ -67,7 +67,7 @@ if(isset($_POST['submit'])){
 
 
          <div class="div1">
-            <a href="../HTML/PetSpace.html">
+            <a href="../HTML/PetSpace.php">
               <img id="img1" src="../Imagens/voltar.png">
               
             </a>

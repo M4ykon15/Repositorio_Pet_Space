@@ -36,7 +36,7 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])
             if ($email === 'admin@gmail.com' && $senha === 'admin123') {
                 header('Location: ADM.php');
             } else {
-                header('Location: PetSpace.html');
+                header('Location: PetSpace.php');
             }
         }
     } catch (PDOException $e) {

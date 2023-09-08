@@ -30,7 +30,7 @@
       
    
           <div class="div_1">
-            <a href="../HTML/PetSpace.html">
+            <a href="../HTML/PetSpace.php">
               <img src="../Imagens/voltar.png">
               
             </a>

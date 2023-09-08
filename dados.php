@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 $serverName = "PetSpace.mssql.somee.com";
 $databaseName = "PetSpace";
 $uid = "CaioSilva_SQLLogin_1";

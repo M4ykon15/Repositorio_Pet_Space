@@ -1,14 +1,16 @@
 
+
 <?php
 include_once('dados.php');
 
 if (isset($_POST['update'])) {
     $id = $_POST['id'];
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
-    $telefone = $_POST['telefone'];
-    $cpf = $_POST['cpf'];
+    $nome_pet = $_POST['nome_pet'];
+    $sexo = $_POST['sexo'];
+    $especie = $_POST['especie'];
+    $raca = $_POST['raca'];
+    $idade = $_POST['idade'];
+    $porte = $_POST['porte'];
 
     // Defina as configurações da conexão com o banco de dados aqui
     $serverName = "PetSpace.mssql.somee.com";
@@ -20,15 +22,16 @@ if (isset($_POST['update'])) {
         $conn = new PDO("sqlsrv:Server=$serverName;Database=$databaseName", $uid, $pwd);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sqlUpdate = "UPDATE usuarios SET nome = :nome, email = :email, senha = :senha, telefone = :telefone, cpf = :cpf WHERE id = :id";
-        $stmt = $conn->prepare($sqlUpdate);
-        $stmt->bindParam(':nome', $nome);
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':senha', $senha);
-        $stmt->bindParam(':telefone', $telefone);
-        $stmt->bindParam(':cpf', $cpf);
-        $stmt->bindParam(':id', $id);
-        $stmt->execute();
+        $sqlUpdateA = "UPDATE animais SET nome_pet = :nome_pet, sexo = :sexo, idade = :idade, porte = :porte, especie = :especie, raca = :raca WHERE id = :id";
+        $stmtA = $conn->prepare($sqlUpdateA);
+        $stmtA->bindParam(':nome_pet', $nome_pet);
+        $stmtA->bindParam(':sexo', $sexo);
+        $stmtA->bindParam(':idade', $idade);
+        $stmtA->bindParam(':porte', $porte);
+        $stmtA->bindParam(':raca', $raca);
+        $stmtA->bindParam(':especie', $especie);
+        $stmtA->bindParam(':id', $id);
+        $stmtA->execute();
 
         header('Location: ../Repositorio_Pet_Space/HTML/ADM.php');
         exit;
@@ -36,5 +39,6 @@ if (isset($_POST['update'])) {
         die("Erro na conexão: " . $e->getMessage());
     }
 }
-
 ?>
+
+

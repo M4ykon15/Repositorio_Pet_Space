@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
         $conn = new PDO("sqlsrv:Server= $serverName; Database = $databaseName", $uid, $pwd);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        if (preg_match('/^.{5,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)) {
+        if (preg_match('/^.{4,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)) {
             $sql = "INSERT INTO usuarios (nome, email, senha, telefone, cpf) VALUES (:nome, :email, :senha, :telefone, :cpf)";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':nome', $nome);
@@ -42,7 +42,7 @@ if(isset($_POST['submit'])){
 
 
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" style="height: 100%;">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,28 +62,31 @@ if(isset($_POST['submit'])){
     <title>Pet Space</title>
 
 </head>
-  <body> 
-    <div class="principal">
+  <body style="position: absolute;"> 
 
 
-         <div class="div1">
+
+  <div class="div1" style="width: 10px; position: absolute;">
             <a href="../HTML/PetSpace.php">
               <img id="img1" src="../Imagens/voltar.png">
               
             </a>
-           </div>
+          </div>
+         
 
-
-  
-           
-           
+    
+    
           
+
          
-       
-         
+   
+   
         
-            <div class='card'>
+            <div class='card' style="height: 580px; margin-left: 500px; position: absolute; margin-top: 100px;">
+
             
+
+
               <h1> CADASTRAR </h1>
               
               
@@ -144,9 +147,10 @@ if(isset($_POST['submit'])){
           
               
             </div>
-    </div>
+   
 
             <script src="../JS/Cadastrar.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
             
       

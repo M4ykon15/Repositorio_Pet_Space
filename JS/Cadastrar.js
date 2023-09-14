@@ -63,7 +63,7 @@ nome.addEventListener('keyup', () => {
 
 
 email.addEventListener('keyup', () => {
-if(email.value.length<= 9 || !email.value.includes('@yahoo.com') && !email.value.includes('@gmail.com') && !email.value.includes('@outlook.com') 
+if(email.value.length <= 3 || !email.value.includes('@yahoo.com') && !email.value.includes('@gmail.com') && !email.value.includes('@outlook.com') 
   && !email.value.includes('@protonmail.com') && !email.value.includes('@aol.com')){
     labelEmail.setAttribute('style', 'color: red')
     labelEmail.innerHTML = 'Email Preencha com algum dominio'
@@ -148,10 +148,7 @@ function cadastrar(){
     msgError.setAttribute('style', 'display: none')
     msgError.innerHTML = ''
     
-    setTimeout(()=>{
-        window.location.href = 'PetSpace.html'
-  
-    }, 3000)
+    
   
     
   } else {

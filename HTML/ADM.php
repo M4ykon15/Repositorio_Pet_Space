@@ -21,6 +21,10 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sqlUsuarios = "SELECT * FROM usuarios ORDER BY id ASC";
+    
+    
+
+
     $stmtUsuarios = $conn->prepare($sqlUsuarios);
     $stmtUsuarios->execute();
 

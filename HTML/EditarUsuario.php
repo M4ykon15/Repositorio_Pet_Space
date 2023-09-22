@@ -56,7 +56,7 @@ if (!empty($_GET['id'])) {
     <link rel="stylesheet" href="../CSS/Edit.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../CSS/Edit.css">
-    <title>Pet Space</title>
+    <title>Alteração de usuário</title>
 
 </head>
   <body style="background-color: gray"> 

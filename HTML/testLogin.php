@@ -34,7 +34,7 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])
             $_SESSION['senha'] = $senha;
 
             if ($email === 'admin@gmail.com' && $senha === 'admin123') {
-                header('Location: ADM.php');
+                header('Location: Adm1.php');
             } else {
                 header('Location: PetSpace.php');
             }

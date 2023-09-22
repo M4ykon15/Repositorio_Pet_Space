@@ -89,7 +89,7 @@ try {
 </a>
 
 <!-- Modal -->
-<div class="modal fade" id="meuModal" tabindex="-1" aria-labelledby="meuModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="meuModal" tabindex="-1" aria-labelledby="meuModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -101,8 +101,40 @@ try {
         
         
       </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar<button>
+      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar<button>
+      
+
+           
+    </div>
+  </div>
+</div>
+</div> -->
+<div class="modal" id="meuModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Perfil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <h5>Email: </h5>
+        <h6>
+          <?php echo $logado?>
+        </h6>
+      </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar<button>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+
+       
+       <a href="../sair.php" class="btn btn-danger" style="font-size: 20px; line-height: 25px;">Sair
+</a>
+
+       
+
+
+        
       </div>
     </div>
   </div>
@@ -370,58 +402,7 @@ try {
   
 
 
-  <div class="lg:py-10 py-5" style="background-color:snow; text-align: center; height: 500px;">
-    <h1 class="title-lg" style="font-size: 45px;">Parcerias</h1>
-    <div class="text-xl text-gray-500" style="font-size: 25px; padding-bottom: 30px;">Algumas parcerias com a ONG PetSpace
-    </div>
-   
-    
 
-
-    <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel"
-      style="display:flexbox;">
-
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-
-      <div class="carousel-inner1" style="display: flex; justify-content: center; align-items: center; margin-bottom: 50px;">
-        <div class="carousel-item active">
-          <img class="" src="../Imagens/ONG_1.jpg" alt="Primeiro Slide"
-            style="border-radius: 20%; margin-left: 30px;margin-right: 30px; width: 300px;;border: solid;">
-          <img class="" src="../Imagens/ONG_2.jpg" alt="Segundo Slide"
-            style="border-radius: 20%; margin-right: 30px;border: solid">
-          <img class="" src="../Imagens/ONG_3.jpg" alt="Terceiro Slide"
-            style="border-radius: 20%; margin-right: 30px;border: solid">
-        </div>
-        <div class="carousel-item">
-          <img class="" src="../Imagens/ONG_4.jpg" alt="Primeiro Slide"
-            style="border-radius: 20%; margin-right: 30px;margin-left: 30px;border: solid">
-          <img class="" src="../Imagens/ONG_5.png" alt="Segundo Slide"
-            style="border-radius: 20%; margin-right: 30px;border: solid">
-          <img class="" src="../Imagens/ONG_6.png" alt="Terceiro Slide"
-            style="border-radius: 20%; margin-right: 30px;border: solid">
-        </div>
-        <div class="carousel-item">
-          <img class="" src="../Imagens/ONG_7.jpg" alt="Primeiro Slide"
-            style="border-radius: 20%; margin-right: 30px;margin-left: 30px ;border: solid">
-          <img class="" src="../Imagens/ONG_8.jpg" alt="Segundo Slide"
-            style="border-radius: 20%; margin-right: 30px;border: solid">
-          <img class="" src="../Imagens/ONG_9.jpg" alt="Terceiro Slide"
-            style="border-radius: 20%; margin-right: 30px; border: solid; ">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-        <span class="sr-only bg-dark">Anterior</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
-        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-        <span class="sr-only">Próximo</span>
-      </a>
-    </div>
     
     
   <footer class="text-center1" style="font-size: 20px; font-size: 20px;  background-color: #333;  color: #ffffff;  padding: 20px 0;

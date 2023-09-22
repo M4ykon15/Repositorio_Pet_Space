@@ -33,7 +33,7 @@ if (isset($_POST['update'])) {
         $stmtA->bindParam(':id', $id);
         $stmtA->execute();
 
-        header('Location: ../Repositorio_Pet_Space/HTML/ADM.php');
+        header('Location: ../Repositorio_Pet_Space/HTML/Adm1.php');
         exit;
     } catch (PDOException $e) {
         die("Erro na conexão: " . $e->getMessage());

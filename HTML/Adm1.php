@@ -34,7 +34,6 @@ WHERE email <> 'admin@gmail.com'";
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -43,7 +42,7 @@ WHERE email <> 'admin@gmail.com'";
     <title>Painel de Administração</title>
 
     
-    <link rel="stylesheet" href="/Repositorio_Pet_Space/CSS/ADM.css">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
     <div class="menu">
@@ -54,7 +53,7 @@ WHERE email <> 'admin@gmail.com'";
     <div class="barra-lateral">
         <div>
             <div class="nombre-pagina">
-                <img src="../PetSpace/Repositorio_Pet_Space/Imagens/icon_pata-removebg-preview.png" alt="" style="height: 85px; width: 85px;">
+                <img src="../Imagens/icon_pata-removebg-preview.png" alt="" style="height: 85px; width: 85px;">
                 <span>Pet Space</span>
             </div>
             
@@ -64,13 +63,13 @@ WHERE email <> 'admin@gmail.com'";
             <ul>
                 <li>
                     <a id="inbox" href="#">
-                        <img  style="height: 50px; width: 40px; padding-bottom: 10px;"   src="../PetSpace/Repositorio_Pet_Space/Imagens/icons8-pessoa-do-sexo-masculino-64.png" />
+                        <img  style="height: 50px; width: 40px; padding-bottom: 10px;"   src="../Imagens/icons8-pessoa-do-sexo-masculino-64.png" />
                         <span style="padding-left: 10px;">Usuários</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img style="padding-left: 5px;height: 35px; width: 40px;"  src="../PetSpace/Repositorio_Pet_Space/Imagens/icons8-ano-do-cão-96.png"/>  
+                        <img style="padding-left: 5px;height: 35px; width: 40px;"  src="../Imagens/icons8-ano-do-cão-96.png"/>  
                           <span style="padding-left: 10px;">Animais</span>
                     </a>
                 </li>
@@ -78,10 +77,16 @@ WHERE email <> 'admin@gmail.com'";
                     
         </nav>
 
-        <div>
-            <div class="linea" style="margin-bottom: 90px;"></div>
 
+        
+
+    <!-- <div style=" position: relative;">
+        <div class="linea" style="margin-bottom: 100px;"></div>
             
+
+                  <div style=""><?php
+                                   echo "<h4> $logado</h4>";
+        ?></div>
                 
                      <button style="align-items: center;display: flex; gap: 20px; height: 50px; width: 130px;background-color: #ff0000; border-color: #ff0000;border-radius: 18px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25PX" height="25PX" fill="white" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
@@ -98,14 +103,34 @@ WHERE email <> 'admin@gmail.com'";
             </div>
     
             
-        </div>
+        </div> -->
+
+
+        <div style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 20px;">
+    <div class="linea" style="margin-bottom: 50px;"></div>
+
+    <div style="margin-bottom: 30px;">
+        <?php echo "<h4> $logado</h4>"; ?>
+    </div>
+
+    <button style="align-items: center; display: flex; gap: 20px; height: 50px; width: 130px; background-color: #ff0000; border-color: #ff0000; border-radius: 18px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25PX" height="25PX" fill="white" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+        </svg>
+        <a href="../sair.php" style="font-size: 18px; text-decoration: none; color: #ffffff;">Logout</a>
+    </button>
+</div>
+
+
+
+
 
     </div>
 
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="../Repositorio_Pet_Space/JS/ADM.js"></script>
+    <script src="../JS/script.js"></script>
 </body>
 </html>
-

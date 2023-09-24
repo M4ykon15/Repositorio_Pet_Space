@@ -2,12 +2,12 @@
 session_start();
 
 // Verifique a sessão para autenticação
-if (!isset($_SESSION['email']) || !isset($_SESSION['senha'])) {
-    header('Location: Login.php');
+if (!isset($_SESSION['emaill']) || !isset($_SESSION['senha'])) {
+    header('Location: ../HTML/Login.php');
     exit;
 }
 
-$logado = $_SESSION['email'];
+$logado = $_SESSION['emaill'];
 
 // Defina as configurações da conexão com o banco de dados aqui
 $serverName = "PetSpace.mssql.somee.com";
@@ -21,7 +21,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sqlUsuarios = "SELECT * FROM usuarios
-WHERE email <> 'admin@gmail.com'";
+WHERE emaill <> 'admin@gmail.com'";
     
     $stmtUsuarios = $conn->prepare($sqlUsuarios);
     $stmtUsuarios->execute();
@@ -209,8 +209,18 @@ WHERE email <> 'admin@gmail.com'";
 
 
 </div>
+ 
 
+      
 
+<a id="a-cad" href="../HTML/Doar.html">
+    <button id="buttonCad" >
+    <svg xmlns="http://www.w3.org/2000/svg" id="add" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+    <p id="cadastrarP">Cadastrar</p>
+    </button>
+</a>
 
 
   </main>

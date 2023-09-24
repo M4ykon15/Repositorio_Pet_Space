@@ -2,12 +2,12 @@
 <?php
 
 if(isset($_POST['submit'])) {
-    $nome = $_POST ['nome'];
-    $email = $_POST ['email'];
-    $senha = $_POST ['senha'];
-    $telefone = $_POST ['telefone'];
-    $cpf = $_POST ['cpf'];
-    $nivel = 1;
+  $nome = $_POST['nome'];
+  $email = $_POST['email'];
+  $senha = $_POST['senha'];
+  $telefone = $_POST['telefone'];
+  $cpf = $_POST['cpf'];
+  $nivel = 1;
 
     // Defina as configurações da conexão com o banco de dados aqui
     $serverName = "PetSpace.mssql.somee.com";
@@ -26,12 +26,13 @@ if(isset($_POST['submit'])) {
         $stmtCheckCPF->execute();
         $cpfExists = $stmtCheckCPF->fetch(PDO::FETCH_ASSOC);
 
-        // Verificar se o email já existe no banco de dados
-        $sqlCheckEmail = "SELECT email FROM usuarios WHERE email = :email";
-        $stmtCheckEmail = $conn->prepare($sqlCheckEmail);
-        $stmtCheckEmail->bindParam(':email', $email);
-        $stmtCheckEmail->execute();
-        $emailExists = $stmtCheckEmail->fetch(PDO::FETCH_ASSOC);
+        // Corrected SQL query for email check
+          $sqlCheckEmail = "SELECT emaill FROM usuarios WHERE emaill = :emaill";
+          $stmtCheckEmail = $conn->prepare($sqlCheckEmail);
+          $stmtCheckEmail->bindParam(':emaill', $email);
+          $stmtCheckEmail->execute();
+          $emailExists = $stmtCheckEmail->fetch(PDO::FETCH_ASSOC);
+
 
         // Verificar se o telefone já existe no banco de dados
         $sqlCheckTelefone = "SELECT telefone FROM usuarios WHERE telefone = :telefone";
@@ -42,10 +43,10 @@ if(isset($_POST['submit'])) {
 
         if (!$cpfExists && !$emailExists && !$telefoneExists) {
             // Nenhum dos dados existe no banco, pode inserir
-            $sql = "INSERT INTO usuarios (nome, email, senha, telefone, cpf, nivel_acesso) VALUES (:nome, :email, :senha, :telefone, :cpf, :nivel_acesso)";
+            $sql = "INSERT INTO usuarios (nome, emaill, senha, telefone, cpf, nivel_acesso) VALUES (:nome, :emaill, :senha, :telefone, :cpf, :nivel_acesso)";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':nome', $nome);
-            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':emaill', $email);
             $stmt->bindParam(':senha', $senha);
             $stmt->bindParam(':telefone', $telefone);
             $stmt->bindParam(':cpf', $cpf);

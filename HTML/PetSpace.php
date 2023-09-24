@@ -3,13 +3,13 @@
 session_start();
 
 // Verifique a sessão para autenticação
-if (!isset($_SESSION['email']) || !isset($_SESSION['senha'])) {
+if (!isset($_SESSION['emaill']) || !isset($_SESSION['senha'])) {
     // Se as variáveis de sessão não estiverem definidas, redirecione para a página de login
     header('Location: login.php');
     exit;
 }
 
-$logado = $_SESSION['email'];
+$logado = $_SESSION['emaill'];
 
 // Defina as configurações da conexão com o banco de dados aqui
 $serverName = "PetSpace.mssql.somee.com";

@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
         die("Erro na conexão: " . $e->getMessage());
     }
 
-         header("Location: ../HTML/ADM.php");
+         header("Location: ../HTML/Adm1.php");
          exit();
     } else {
         echo "Erro no envio do arquivo ou tipo de arquivo não suportado.";

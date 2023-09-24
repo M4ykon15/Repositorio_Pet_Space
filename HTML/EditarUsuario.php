@@ -23,7 +23,7 @@ if (!empty($_GET['id'])) {
 
         if ($row) {
             $nome = $row['nome'];
-            $email = $row['email'];
+            $email = $row['emaill'];
             $senha = $row['senha'];
             $telefone = $row['telefone'];
             $cpf = $row['cpf'];

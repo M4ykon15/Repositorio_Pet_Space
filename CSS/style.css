@@ -173,7 +173,7 @@ body{
     border-radius: 10px;
     color: var(--color-texto-menu);
 }
-.barra-lateral .navegacion a:hover{
+.barra-lateral .navegacion a:hover{ 
     background-color: var(--color-menu-hover);
     color: var(--color-menu-hover-texto);
 }
@@ -283,7 +283,7 @@ body{
 /*-------------main*/
 
 .inbox{
-    background-color: var(--color-menu-hover);
+    
     color: var(--color-menu-hover-texto);
 }
 #btnUsuarios{
@@ -380,3 +380,41 @@ main.min-main{
         padding-top: 15px; 
         padding-left: 30px;
     }
+
+    #buttonCad{
+        position: absolute;
+        cursor: pointer;
+        align-items: center;
+         display:  flex; 
+         gap: 20px; 
+        height: 50px;
+         width: 150px; 
+        background-color: #02863e; 
+        border-color: #02863e; 
+        border-radius: 18px;
+    }
+
+    #cadastrarP{
+        display: flex;
+        color: #ffffff; 
+        cursor: pointer; 
+        padding-top: 15px;
+        padding-right: 15px;
+    }
+
+    #add{
+
+        width: 50px;
+        height: 70px;
+        padding-left: 10px;
+    }
+
+    #a-cad{
+        position: absolute;
+        text-decoration: none; 
+        color: #000;
+        display: none;
+        margin-top: 0px;
+        margin-left: 50px;
+    }
+   

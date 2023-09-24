@@ -17,11 +17,18 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])
         $conn = new PDO("sqlsrv:Server= $serverName; Database = $databaseName", $uid, $pwd);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+
+        $busca = $conn->prepare("SELECT nivel_acesso FROM USUARIOS WHERE email = '$email' and senha ='$senha'");
+        $busca->execute();
+
+        $nivelAcesso = $busca->fetchColumn();
+
         $sql = "SELECT * FROM usuarios WHERE email = :email AND senha = :senha";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':senha', $senha);
         $stmt->execute();
+
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -30,15 +37,19 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])
             unset($_SESSION['senha']);
             header('Location: Login.php'); 
         } else {
-            $_SESSION['email'] = $email;
-            $_SESSION['senha'] = $senha;
-
-            if ($email === 'admin@gmail.com' && $senha === 'admin123') {
+            if($nivelAcesso == 0 ){
+                $_SESSION['email'] = $email;
+                $_SESSION['senha'] = $senha;
                 header('Location: Adm1.php');
-            } else {
+            }
+            else{
+                $_SESSION['email'] = $email;
+                $_SESSION['senha'] = $senha;
                 header('Location: PetSpace.php');
             }
+           
         }
+           
     } catch (PDOException $e) {
         die("Erro na conexão: " . $e->getMessage());
     }

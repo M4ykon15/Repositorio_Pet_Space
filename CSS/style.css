@@ -51,7 +51,7 @@
 body{
     height: 100vh;
     width: 100%;
-    background-color: rgb(4, 114, 28);
+    background-color: rgb(31, 202, 82);
 }
 
 /*-----------------Menu*/
@@ -282,7 +282,11 @@ body{
 
 /*-------------main*/
 
-#inbox{
+.inbox{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
+#btnUsuarios{
     background-color: var(--color-menu-hover);
     color: var(--color-menu-hover-texto);
 }
@@ -290,7 +294,7 @@ body{
 main{
     margin-left: 250px;
     padding: 20px;
-    transition: margin-left 0.5s ease;
+    
 }
 main.min-main{
     margin-left: 80px;
@@ -333,3 +337,46 @@ main.min-main{
 .span{
     padding-left: 15px;
 }
+
+#btnUsuarios {
+    padding-left: 10px; 
+    border: none; 
+    cursor: pointer; 
+    background: none; 
+    outline: none
+}
+
+    #btnAnimais {
+        padding-left: 10px; 
+        border: none; 
+        cursor: pointer; 
+        background: none; 
+        outline: none
+    }
+
+    #tabelaUsuarios{
+        display: none;
+
+
+    }
+
+    #tabelaAnimais{
+        display: none;
+    }
+
+    .inicio{
+        cursor: pointer;align-items: center; display: flex; gap: 20px; 
+        height: 50px; 
+        width: 130px; 
+        background-color: #00ff00; 
+        border-color: #00ff00; 
+        border-radius: 18px;
+        margin-top: 15px;
+    }
+
+    #inicio{
+        color: #000; 
+        cursor: pointer; 
+        padding-top: 15px; 
+        padding-left: 30px;
+    }

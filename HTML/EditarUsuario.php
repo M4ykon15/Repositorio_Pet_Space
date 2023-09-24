@@ -35,7 +35,7 @@ if (!empty($_GET['id'])) {
         die("Erro na conexão: " . $e->getMessage());
     }
 } else {
-    header('Location: ../HTML/ADM.php');
+    header('Location: ../HTML/Adm1.php');
     exit;
 }
 ?>
@@ -64,7 +64,7 @@ if (!empty($_GET['id'])) {
 
        
     <div class="div1">
-            <a href="../HTML/ADM.php">
+            <a href="../HTML/Adm1.php">
               <img id="img1" src="../Imagens/voltar.png">
               
             </a>
@@ -80,7 +80,7 @@ if (!empty($_GET['id'])) {
 
 
             <div class='card'>
-              <h2> Editar usuário </h2>
+              <h2 class="edit"> Editar usuário </h2>
               
               
               <!-- <div id='msgSuccess'></div> -->

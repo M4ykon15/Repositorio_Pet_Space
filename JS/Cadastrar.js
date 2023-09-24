@@ -144,7 +144,7 @@ function cadastrar(){
   if(validNome && validEmail && validCpf && validSenha && validTelefone){
 
     msgSuccess.setAttribute('style', 'display: block')
-    msgSuccess.innerHTML = '<strong>Cadastrando usuário...</strong>'
+    msgSuccess.innerHTML = '<strong>Cadastrando usuário</strong>'
     msgError.setAttribute('style', 'display: none')
     msgError.innerHTML = ''
     
@@ -159,4 +159,5 @@ function cadastrar(){
     return false;
   }
 }
+
 

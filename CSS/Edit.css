@@ -2,19 +2,29 @@
 
 
 * {
-  margin: 0;
-  padding: 0;
+ 
   font-family: "Quicksand", sans-serif;
 }
 
-.principal{
-
-    height: 100%;
-}
-
-body{
+body {
   background: linear-gradient(to bottom, #32cd32, #00bb00);
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  background-attachment: fixed;
+  
+  
 }
+
+
+.container {
+  display: flex;
+  width: 50%;
+  margin-bottom: 5%;
+  margin-left: 22%;
+  position: fixed;
+}
+
+
 
 
 
@@ -36,14 +46,11 @@ body{
   width: 25px; 
 }
 
-
- 
-
-
-  .container{
-    display: flex;
-  justify-content: center;
-  }
+.edit{
+  padding-left: 20%;
+}
+  
+  
 
   .card {
     background-color: #ffffff80;
@@ -51,12 +58,13 @@ body{
     border-radius: 9%;
     box-shadow: 3px 3px 1px 0px #000000;
     width: 400px;
-    height: 590px;
-    display: flex;
-      position: relative;
+    height: 600px;
+    margin-top: 5%;
+    margin-left: 25%;
+    position: absolute;
   }
   
-  h2{
+  h1{
     text-align: center;
     margin-bottom: 20px;
     color: #000000
@@ -64,13 +72,25 @@ body{
   
 #img1{
 
-  height: 55px;
-  width: 55px;
-  margin-top: 35px;
-  margin-left: 40px;
+  height: 65px;
+  width: 65px;
 
 }
+#img2{
 
+ width: 40%;
+ height: 15%;
+ margin-top: 10%;
+
+  position: absolute;
+
+  
+}
+
+.div1{
+  margin-left: 50px;
+  margin-top: 50px;
+}
 
 
   .label-float input{
@@ -143,7 +163,7 @@ body{
   .justify-center{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    
   }
   
   hr{
@@ -153,19 +173,7 @@ body{
   }
  
   
-  #msgError{
-    text-align: center;
-    color: #ff0000;
-    background-color: #ffbbbb;
-    padding: 5px;
-    border-radius: 4px;
-    display: none;
-    margin-top: 10px;
-    margin-bottom: -10px;
-    font-size: 15px;
-    width: 600px;
-    margin-left: 60px;
-  }
+  
   
   #msgSuccess{
     text-align: center;
@@ -188,29 +196,14 @@ body{
   }
   
   a{
-    color: #32ac2e;
+    color: #101110;
     font-weight: bold;
     text-decoration: none;
     transition: all .3s ease-out;
   }
-
+  
   a:hover{
-    color: #272262;
+    color:  #535553;
   }
 
-  #btn1{
-
-    position: absolute; 
-    top: 2px; 
-    left: 60px;
-    height: 50px;
-  }
-
-  .div1{
-    
-      margin-left: 10px;
-      margin-top: 10px;
-      display: flex;
-      position: relative;
-  }
   

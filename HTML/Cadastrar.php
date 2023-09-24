@@ -1,12 +1,13 @@
- <?php
+ 
+<?php
 
-if(isset($_POST['submit'])){
-
+if(isset($_POST['submit'])) {
     $nome = $_POST ['nome'];
     $email = $_POST ['email'];
     $senha = $_POST ['senha'];
     $telefone = $_POST ['telefone'];
     $cpf = $_POST ['cpf'];
+    $nivel = 1;
 
     // Defina as configurações da conexão com o banco de dados aqui
     $serverName = "PetSpace.mssql.somee.com";
@@ -18,17 +19,41 @@ if(isset($_POST['submit'])){
         $conn = new PDO("sqlsrv:Server= $serverName; Database = $databaseName", $uid, $pwd);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        if (preg_match('/^.{4,}@(gmail\.com|outlook\.com\.br|yahoo\.com\.br)$/', $email)) {
-            $sql = "INSERT INTO usuarios (nome, email, senha, telefone, cpf) VALUES (:nome, :email, :senha, :telefone, :cpf)";
+        // Verificar se o CPF já existe no banco de dados
+        $sqlCheckCPF = "SELECT cpf FROM usuarios WHERE cpf = :cpf";
+        $stmtCheckCPF = $conn->prepare($sqlCheckCPF);
+        $stmtCheckCPF->bindParam(':cpf', $cpf);
+        $stmtCheckCPF->execute();
+        $cpfExists = $stmtCheckCPF->fetch(PDO::FETCH_ASSOC);
+
+        // Verificar se o email já existe no banco de dados
+        $sqlCheckEmail = "SELECT email FROM usuarios WHERE email = :email";
+        $stmtCheckEmail = $conn->prepare($sqlCheckEmail);
+        $stmtCheckEmail->bindParam(':email', $email);
+        $stmtCheckEmail->execute();
+        $emailExists = $stmtCheckEmail->fetch(PDO::FETCH_ASSOC);
+
+        // Verificar se o telefone já existe no banco de dados
+        $sqlCheckTelefone = "SELECT telefone FROM usuarios WHERE telefone = :telefone";
+        $stmtCheckTelefone = $conn->prepare($sqlCheckTelefone);
+        $stmtCheckTelefone->bindParam(':telefone', $telefone);
+        $stmtCheckTelefone->execute();
+        $telefoneExists = $stmtCheckTelefone->fetch(PDO::FETCH_ASSOC);
+
+        if (!$cpfExists && !$emailExists && !$telefoneExists) {
+            // Nenhum dos dados existe no banco, pode inserir
+            $sql = "INSERT INTO usuarios (nome, email, senha, telefone, cpf, nivel_acesso) VALUES (:nome, :email, :senha, :telefone, :cpf, :nivel_acesso)";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':nome', $nome);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':senha', $senha);
             $stmt->bindParam(':telefone', $telefone);
             $stmt->bindParam(':cpf', $cpf);
+            $stmt->bindParam(':nivel_acesso', $nivel);
             $stmt->execute();
             header('Location: ../HTML/Login.php');
         } else {
+            // Pelo menos um dos dados já existe, redirecione para a tela de cadastro
             header('Location: ../HTML/Cadastrar.php');
         }
     } catch (PDOException $e) {
@@ -37,6 +62,7 @@ if(isset($_POST['submit'])){
 }
 
 ?>
+
 
 
 
@@ -91,20 +117,30 @@ if(isset($_POST['submit'])){
               
               
               <div id='msgSuccess'></div>
+              <div id='msgError'></div>
               
               <form method="POST" action="">
-                      <div class="label-float">
-                         <input class="texto" type="text" name="nome" id="nome" placeholder=" " required>
-                         <label class="letra" id="labelNome" for="nome">Nome</label>
-                      </div>
+                       
+              <div class="label-float">
+    <svg xmlns="http://www.w3.org/2000/svg" id="iconnome"  width="16" heigth="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+    </svg>   
+    <input class="texto" type="text" name="nome" id="nome" placeholder=" " required>
+    <label class="letra" id="labelNome" for="nome">Nome</label>
+</div>
+
           
                       <div class="label-float">
+                      <svg xmlns="http://www.w3.org/2000/svg" id="iconemail"  width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+</svg>
                          <input class="texto" type="text" name="email" id="email" placeholder=" " required>
                          <label class="letra" id="labelEmail" for="email">Email</label>
                       </div>
 
                       
                       <div class="label-float">
+                      
                         <input class="texto" type="password" name="senha"  id="senha" placeholder=" " required>
                         <label class="letra" id="labelSenha" for="senha">Senha</label>
                         <i class="fa fa-eye" id="eyeIcon" aria-hidden="true"></i>
@@ -112,6 +148,9 @@ if(isset($_POST['submit'])){
 
 
                       <div class="label-float">
+                      <svg xmlns="http://www.w3.org/2000/svg" id="icontel"  width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+</svg>
                         <input class="texto" type="tel" name ="telefone" id="telefone" placeholder=" " required>
                         <label class="letra" id="labelTelefone" for="telefone">Telefone</label>
                       </div>
@@ -120,6 +159,7 @@ if(isset($_POST['submit'])){
                       
 
                       <div class="label-float">
+                        <img id="cpficon" src="../Imagens/contact_96967.png" />
                         <input class="texto" type="text" name="cpf" id="cpf" placeholder=" " required>
                         <label class="letra" id="labelCpf" for="cpf">CPF</label>
                      </div>

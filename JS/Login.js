@@ -82,7 +82,7 @@ btn.addEventListener('click', () => {
         return false
       } else {
         msgSuccess.setAttribute('style', 'display: block')
-        msgSuccess.innerHTML = '<strong>Cadastrando usuário...</strong>'
+        msgSuccess.innerHTML = '<strong>Aguarde...</strong>'
         msgError.setAttribute('style', 'display: none')
         msgError.innerHTML = ''
 

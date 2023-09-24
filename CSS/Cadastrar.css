@@ -31,19 +31,54 @@ body {
 .fa-eye{
   position: absolute;
   top: 25px;
-  right: 10px;
+  right: 5px;
   cursor: pointer;
+  color: #000000;
+  width: 25px;
+
+}
+
+#iconnome{
+  position: absolute;
+  top: 20px;
+  right: 10px;
   color: #000000;
   width: 25px;
 }
 
+#iconemail{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  color: #000000;
+  width: 25px;
+  height: 20;
+}
+#icontel{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  color: #000000;
+  width: 25px;
+  height: 20;
+}
+#cpficon{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  color: #000000;
+  width: 25px;
+  
+}
+
+
 .fa-eye-slash{
   position: absolute;
   top: 25px;
-  right: 10px;
+  right: 5px;
   cursor: pointer;
   color: #000000;
-  width: 25px; 
+  width: 25px;
 }
 
 
@@ -175,7 +210,7 @@ body {
   
   #msgSuccess{
     text-align: center;
-    color: #00bb00;
+    color: #3dad09;
     background-color: #bbffbe;
     padding: 10px;
     border-radius: 4px;
@@ -204,4 +239,7 @@ body {
     color:  #535553;
   }
 
+  .red-label {
+    color: red;
+  }
   

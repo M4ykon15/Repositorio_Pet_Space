@@ -36,7 +36,7 @@ if (!empty($_GET['id'])) {
         die("Erro na conexão: " . $e->getMessage());
     }
 } else {
-    header('Location: ../HTML/ADM.php');
+    header('Location: ../HTML/Adm1.php');
     exit;
 }
 ?>
@@ -79,7 +79,7 @@ if (!empty($_GET['id'])) {
     
     <div class ="d-flex">
       
-      <a href="../HTML/ADM.php" class="btn" style="color: #000; background-color: #90EE90; margin-right: 25px;">Voltar</a>
+      <a href="../HTML/Adm1.php" class="btn" style="color: #000; background-color: #90EE90; margin-right: 25px;">Voltar</a>
     </div>
   </div>
 </nav>

@@ -3,7 +3,7 @@
 
 if(isset($_POST['submit'])) {
   $nome = $_POST['nome'];
-  $email = $_POST['email'];
+  $email = $_POST['emaill'];
   $senha = $_POST['senha'];
   $telefone = $_POST['telefone'];
   $cpf = $_POST['cpf'];
@@ -52,6 +52,7 @@ if(isset($_POST['submit'])) {
             $stmt->bindParam(':cpf', $cpf);
             $stmt->bindParam(':nivel_acesso', $nivel);
             $stmt->execute();
+            
             header('Location: ../HTML/Login.php');
         } else {
             // Pelo menos um dos dados já existe, redirecione para a tela de cadastro
@@ -63,6 +64,8 @@ if(isset($_POST['submit'])) {
 }
 
 ?>
+
+
 
 
 

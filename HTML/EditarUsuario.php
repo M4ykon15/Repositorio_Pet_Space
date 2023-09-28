@@ -28,7 +28,7 @@ if (!empty($_GET['id'])) {
             $telefone = $row['telefone'];
             $cpf = $row['cpf'];
         } else {
-            header('Location: ../HTML/ADM.php');
+            header('Location: ../HTML/Adm1.php');
             exit;
         }
     } catch (PDOException $e) {
@@ -92,7 +92,7 @@ if (!empty($_GET['id'])) {
                       </div>
           
                       <div class="label-float">
-                         <input class="texto" type="text" name="email" id="email"  value="<?php echo $email ?>" placeholder=" " required>
+                         <input class="texto" type="text" name="emaill" id="email"  value="<?php echo $email ?>" placeholder=" " required>
                          <label class="letra" id="labelEmail" for="email">Email</label>
                       </div>
 

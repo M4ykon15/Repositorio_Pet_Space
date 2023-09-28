@@ -27,6 +27,6 @@ if (!empty($_GET['id'])) {
     }
 }
 
-header('Location: ../Repositorio_Pet_Space/HTML/Adm1.php');
+header('Location: ../HTML/Adm1.php');
 
 ?>

@@ -16,39 +16,47 @@ body {
 
 .card-container {
     display: flex; /* Permite a exibição lado a lado */
-    flex-wrap: wrap; /* Faz com que os cards quebrem para a próxima linha se necessário */
-    justify-content: space-between; 
+    /* flex-wrap: wrap; Faz com que os cards quebrem para a próxima linha se necessário */
+    /* justify-content: space-between;  */
     position: absolute;/* Distribui os cards com espaço igual entre eles */
-}
-
-.card {
-    width: calc(25% - 30px); /* 25% de largura para cada card com um pequeno espaço entre eles */
-    margin-bottom: 50px;
-    border-radius: 50px 50px 50px 50px;
-    position: relative;
-    /* Restante do seu CSS para os cards */
+    margin-top: 40px;
 }
 
 /* .card {
-    background-color: #f0f0f0;
+    width: calc(25% - 30px);
+    margin-bottom: 50px;
+    border-radius: 50px 50px 50px 50px;
+    position: relative;
+    
+} */
+
+.card {
+    background-color: #ffffff;
     padding: 10px;
-    border-radius: 30px;
+    border-radius: 20px;
     display: inline-block;
+    position: flex;
     margin-left: 0%;
     margin-right: 0%;
     margin-top: 0%;
     margin-bottom: 0%;
-    width: 30rem;
+    width: 20%;
     
-} */
+}
 
 
-
+.card-body{
+    display: flex;
+    margin-right: 15px;
+    margin-top: 20px;
+}
 
 .card-img-top {
     border-radius: 50px 50px 50px 50px;
-    width: 20rem;
-    padding: 20px;
+    width: 30px;
+    height: 10px;
+    padding: 10px;
+    position: relative;
     }
 
 .nav {
@@ -726,4 +734,7 @@ body {
             margin: 0 auto;
           }
 
-         
+         .btn-primary{
+            margin-top: 15px;
+            
+         }

@@ -27,6 +27,7 @@ btn.addEventListener('click', () => {
 });
 
 
+
   email.addEventListener('keyup', () => {
     if(email.value.length === 0 && (" ")) {
       labelEmail.setAttribute('style', 'color: red')
@@ -55,10 +56,7 @@ btn.addEventListener('click', () => {
       return false;
    }
 
-     else if(senha.value.length <= 5 
- 
-  
-  ){
+     else if(senha.value.length <= 7 ){
       labelSenha.setAttribute('style', 'color: red')
     
       senha.setAttribute('style', 'border-color: red')
@@ -82,7 +80,7 @@ btn.addEventListener('click', () => {
         return false
       } else {
         msgSuccess.setAttribute('style', 'display: block')
-        msgSuccess.innerHTML = '<strong>Aguarde...</strong>'
+        msgSuccess.innerHTML = '<strong>Aguarde</strong>'
         msgError.setAttribute('style', 'display: none')
         msgError.innerHTML = ''
 

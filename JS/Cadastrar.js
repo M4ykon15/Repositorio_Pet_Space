@@ -71,7 +71,7 @@ if(email.value.length <= 3 || !email.value.includes('@yahoo.com') && !email.valu
     validEmail = false
   } else {
     labelEmail.setAttribute('style', 'color: green')
-    labelEmail.innerHTML = 'Usuário'
+    labelEmail.innerHTML = 'Email'
     email.setAttribute('style', 'border-color: green')
     validEmail = true
   }
@@ -124,9 +124,9 @@ cpf.addEventListener('keyup', () => {
 
 
 senha.addEventListener('keyup', () => {
-  if(senha.value.length <= 5){
+  if(senha.value.length <= 9){
     labelSenha.setAttribute('style', 'color: red')
-    labelSenha.innerHTML = 'Senha Insira no minimo 6 caracteres'
+    labelSenha.innerHTML = 'Senha Insira no minimo 8 caracteres'
     senha.setAttribute('style', 'border-color: red')
     validSenha = false
   } else {

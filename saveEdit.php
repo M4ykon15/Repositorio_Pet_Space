@@ -5,7 +5,7 @@ include_once('dados.php');
 if (isset($_POST['update'])) {
     $id = $_POST['id'];
     $nome = $_POST['nome'];
-    $email = $_POST['emaill'];
+    $email = $_POST['email'];
     $senha = $_POST['senha'];
     $telefone = $_POST['telefone'];
     $cpf = $_POST['cpf'];
@@ -20,10 +20,10 @@ if (isset($_POST['update'])) {
         $conn = new PDO("sqlsrv:Server=$serverName;Database=$databaseName", $uid, $pwd);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sqlUpdate = "UPDATE usuarios SET nome = :nome, emaill = :emaill, senha = :senha, telefone = :telefone, cpf = :cpf WHERE id = :id";
+        $sqlUpdate = "UPDATE usuarios SET nome = :nome, email = :email, senha = :senha, telefone = :telefone, cpf = :cpf WHERE id = :id";
         $stmt = $conn->prepare($sqlUpdate);
         $stmt->bindParam(':nome', $nome);
-        $stmt->bindParam(':emaill', $email);
+        $stmt->bindParam(':email', $email);
         $stmt->bindParam(':senha', $senha);
         $stmt->bindParam(':telefone', $telefone);
         $stmt->bindParam(':cpf', $cpf);

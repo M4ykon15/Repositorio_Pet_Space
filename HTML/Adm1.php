@@ -2,12 +2,12 @@
 session_start();
 
 // Verifique a sessão para autenticação
-if (!isset($_SESSION['emaill']) || !isset($_SESSION['senha'])) {
+if (!isset($_SESSION['email']) || !isset($_SESSION['senha'])) {
     header('Location: ../HTML/Login.php');
     exit;
 }
 
-$logado = $_SESSION['emaill'];
+$logado = $_SESSION['email'];
 
 // Defina as configurações da conexão com o banco de dados aqui
 $serverName = "PetSpace.mssql.somee.com";
@@ -21,7 +21,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sqlUsuarios = "SELECT * FROM usuarios
-WHERE emaill <> 'admin@gmail.com'";
+     WHERE email <> 'admin@gmail.com'";
     
     $stmtUsuarios = $conn->prepare($sqlUsuarios);
     $stmtUsuarios->execute();
@@ -138,7 +138,7 @@ WHERE emaill <> 'admin@gmail.com'";
             echo "<tr>";
             echo "<td>" . $row['id'] . "</td>";
             echo "<td>" . $row['nome'] . "</td>";
-            echo "<td>" . $row['emaill'] . "</td>";
+            echo "<td>" . $row['email'] . "</td>";
             echo "<td>" . $row['senha'] . "</td>";
             echo "<td>" . $row['telefone'] . "</td>";
             echo "<td>" . $row['cpf'] . "</td>";
@@ -189,6 +189,7 @@ WHERE emaill <> 'admin@gmail.com'";
             echo "<td>" . $rowA['raca'] . "</td>";
             echo "<td>" . $rowA['porte'] . "</td>";
             echo "<td>" . $rowA['idade'] . "</td>";
+            echo "<td>" . $rowA['foto'] . "</td>";
             echo "<td>
                   <a class='btn btn-sm btn-primary' href='../HTML/EditarAnimal.php?id=$rowA[id]'>
                       <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>

@@ -23,7 +23,7 @@ if (!empty($_GET['id'])) {
 
         if ($row) {
             $nome = $row['nome'];
-            $email = $row['emaill'];
+            $email = $row['email'];
             $senha = $row['senha'];
             $telefone = $row['telefone'];
             $cpf = $row['cpf'];
@@ -92,7 +92,7 @@ if (!empty($_GET['id'])) {
                       </div>
           
                       <div class="label-float">
-                         <input class="texto" type="text" name="emaill" id="email"  value="<?php echo $email ?>" placeholder=" " required>
+                         <input class="texto" type="text" name="email" id="email"  value="<?php echo $email ?>" placeholder=" " required>
                          <label class="letra" id="labelEmail" for="email">Email</label>
                       </div>
 

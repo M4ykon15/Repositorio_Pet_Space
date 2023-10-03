@@ -168,13 +168,13 @@ a:hover{
   width: 25px;
 }
 
-.bi-unlock-fill{
+.fa-eye-slash{
   position: absolute;
   top: 25px;
   right: 5px;
   cursor: pointer;
   color: #000000;
-  width: 25px; 
+  width: 25px;
 }
 
 

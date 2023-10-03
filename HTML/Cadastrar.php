@@ -3,7 +3,7 @@
 
 if(isset($_POST['submit'])) {
   $nome = $_POST['nome'];
-  $email = $_POST['emaill'];
+  $email = $_POST['email'];
   $senha = $_POST['senha'];
   $telefone = $_POST['telefone'];
   $cpf = $_POST['cpf'];
@@ -27,9 +27,9 @@ if(isset($_POST['submit'])) {
         $cpfExists = $stmtCheckCPF->fetch(PDO::FETCH_ASSOC);
 
         // Corrected SQL query for email check
-          $sqlCheckEmail = "SELECT emaill FROM usuarios WHERE emaill = :emaill";
+          $sqlCheckEmail = "SELECT email FROM usuarios WHERE email = :email";
           $stmtCheckEmail = $conn->prepare($sqlCheckEmail);
-          $stmtCheckEmail->bindParam(':emaill', $email);
+          $stmtCheckEmail->bindParam(':email', $email);
           $stmtCheckEmail->execute();
           $emailExists = $stmtCheckEmail->fetch(PDO::FETCH_ASSOC);
 
@@ -43,10 +43,10 @@ if(isset($_POST['submit'])) {
 
         if (!$cpfExists && !$emailExists && !$telefoneExists) {
             // Nenhum dos dados existe no banco, pode inserir
-            $sql = "INSERT INTO usuarios (nome, emaill, senha, telefone, cpf, nivel_acesso) VALUES (:nome, :emaill, :senha, :telefone, :cpf, :nivel_acesso)";
+            $sql = "INSERT INTO usuarios (nome, email, senha, telefone, cpf, nivel_acesso) VALUES (:nome, :email, :senha, :telefone, :cpf, :nivel_acesso)";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':nome', $nome);
-            $stmt->bindParam(':emaill', $email);
+            $stmt->bindParam(':email', $email);
             $stmt->bindParam(':senha', $senha);
             $stmt->bindParam(':telefone', $telefone);
             $stmt->bindParam(':cpf', $cpf);

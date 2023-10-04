@@ -228,43 +228,61 @@ try {
             $query = "SELECT id,
                       nome_pet as nome,
                       sexo,
-                      imagem
+                      imagem,
+                      idade,
+                      porte,
+                      especie
                   FROM animais";
             $stmt = $conn->prepare($query);
             $stmt->execute();
             $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             // Loop através dos resultados e exiba os cards com Bootstrap
-            foreach ($results as $row) {
-             
-              echo '<div class="card">';
-              echo '<div class="card-body">'; // Abre a div do card-body
-              
-              echo '<img id="card-img-top" src="data:image/jpeg;base64,' . base64_encode($row['imagem']) . '" alt="' . $row['nome'] . '" class="img-fluid">';
-              echo '<h3 class="card-title">' . $row['nome'];
-              
-              
-              // Verifique o sexo do animal e exiba o ícone correspondente
-             
-              echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal' . $row['id'] . '">';
-              echo 'Mais Informações';
-              echo '</button>';
-              if ($row['sexo'] === 'Fêmea') {
-                  echo '<span class="material-symbols-outlined" style="float:right;font-size: 40px; color:deeppink">female</span>';
-              } elseif ($row['sexo'] === 'Macho') {
-                  echo '<span class="material-symbols-outlined" style="float:right;font-size: 40px; color:darkblue;">male</span>';
-              }
-              
-              
-              
-              echo '</div>'; // Fecha a div do card-body
-              echo '</div>'; // Fecha a div do card
-              
-               
+            // Defina a largura e a altura desejadas fora do loop
+$imgWidth = 240;
+$imgHeight = 200;
 
+foreach ($results as $row) {
+    echo '<div class="card">';
+    echo '<div class="text-center">';
+    echo '<img src="data:image/jpeg;base64,' . base64_encode($row['imagem']) . '" alt="' . '" class="img-fluid" style="width: ' . $imgWidth . 'px; height: ' . $imgHeight . 'px; margin-top: 10px; border-radius: 20px;">';
+    echo '</div>';
+    echo '<h4 style="padding-top: 20px;padding-left:20px">' . $row['nome'];
+    echo '</h4>';
+   
+    if ($row['sexo'] === 'Fêmea') {
+      echo '<span class="material-symbols-outlined" style="position:absolute;font-size: 50px; padding-left:200px; margin-top:247px ;color:deeppink">female</span>';
+  } else if ($row['sexo'] === 'Macho') {
+      echo '<span class="material-symbols-outlined" style="position:absolute;font-size: 50px; padding-left:200px; margin-top:247px ;color:darkblue;">male</span>';
+  }
+  echo '<button type="button" class="btn btn-primary" style="margin-left:20px ;width: 220px; margin-top: 30px;" data-bs-toggle="modal" data-bs-target="#modal' . $row['id'] . '">Mais Informações</button>';
 
-               
-            }
+    
+    echo '</div>';
+    
+    // Modal para exibir informações detalhadas
+    echo '<div class="modal fade" id="modal' . $row['id'] . '" tabindex="-1" aria-labelledby="modalLabel' . $row['id'] . '" aria-hidden="true">';
+    echo '<div class="modal-dialog modal-dialog-centered">';
+    echo '<div class="modal-content">';
+    echo '<div class="modal-header">';
+    echo '<h5 class="modal-title" id="modalLabel' . $row['id'] . '">' . $row['nome'] . '</h5>';
+    echo '</div>';
+    echo '<div class="modal-body">';
+    echo '<p>';
+    echo '<img src="data:image/jpeg;base64,' . base64_encode($row['imagem']) . '" alt="' . '" class="img-fluid" style="width: ' . $imgWidth . 'px; height: ' . $imgHeight . 'px; margin-top: 10px; margin-bottom:20px;border-radius: 20px;">' . '</br>';
+   
+    echo '<strong>Sexo:</strong> ' . $row['sexo'] . '<br>';
+    echo '<strong>Espécie:</strong> ' . $row['especie'] . '<br>';
+    echo '<strong>Idade:</strong> ' . $row['idade'] . '<br>';
+    echo '<strong>Porte:</strong> ' . $row['porte'] . '<br>';
+    // Adicione outras informações aqui, como espécie, raça, porte, idade, etc.
+    echo '</p>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+}
+
         } catch (PDOException $e) {
             echo "Erro na conexão: " . $e->getMessage();
         }

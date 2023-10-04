@@ -28,8 +28,11 @@ if (!empty($_GET['id'])) {
             $raca = $row['raca'];
             $idade = $row['idade'];
             $porte = $row['porte'];
+            $porte = $row['porte'];
+            
+
         } else {
-            header('Location: ../HTML/ADM.php');
+            header('Location: ../HTML/Adm1.php');
             exit;
         }
     } catch (PDOException $e) {
@@ -120,10 +123,13 @@ if (!empty($_GET['id'])) {
 <input type="file" id="foto" name="foto" accept="image/*" onchange="mostrarFoto(event)" style="margin-top: 20px;">
 </br> -->
 
-<input type="file" name="foto" id="foto"   required/>
+<div class="custom-file">
+        <input type="file" class="custom-file-input" name="imagem" id="imagem">
+        <label class="custom-file-label" for="imagem">Escolha um arquivo</label>
+      </div>
 
 <div class='justify-center'>
-                      <input type="hidden" name="id" value="<?php echo $id ?>">
+ <input type="hidden" name="id" value="<?php echo $id ?>">
 <button type="submit" class="btn btn-success btn-lg" name="update" id="update"   style="margin-top: 50px;">Enviar</button>
 
     </form>

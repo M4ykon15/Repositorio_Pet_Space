@@ -189,7 +189,6 @@ try {
             echo "<td>" . $rowA['raca'] . "</td>";
             echo "<td>" . $rowA['porte'] . "</td>";
             echo "<td>" . $rowA['idade'] . "</td>";
-            echo "<td>" . $rowA['foto'] . "</td>";
             echo "<td>
                   <a class='btn btn-sm btn-primary' href='../HTML/EditarAnimal.php?id=$rowA[id]'>
                       <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>

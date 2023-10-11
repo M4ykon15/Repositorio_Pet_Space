@@ -338,21 +338,17 @@ main.min-main{
     padding-left: 15px;
 }
 
-#btnUsuarios {
+#btnUsuarios, #btnAnimais {
     padding-left: 10px; 
     border: none; 
     cursor: pointer; 
     background: none; 
-    outline: none
+    outline: none;
+    width: 180px;
+    padding-right: 80px;
 }
 
-    #btnAnimais {
-        padding-left: 10px; 
-        border: none; 
-        cursor: pointer; 
-        background: none; 
-        outline: none
-    }
+    
 
     #tabelaUsuarios{
         display: none;
@@ -418,3 +414,21 @@ main.min-main{
         margin-left: 50px;
     }
    
+
+    #msgError{
+        text-align: center;
+        color: #ff0000;
+        background-color: #ffbbbb;
+        padding: 10px;
+        border-radius: 4px;
+        display: none;
+      }
+      
+      #msgSuccess{
+          text-align: center;
+          color: #00bb00;
+          background-color: #bbffbe;
+          padding: 10px;
+          border-radius: 4px;
+          display: none;
+        }

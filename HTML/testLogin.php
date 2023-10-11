@@ -37,7 +37,16 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
             unset($_SESSION['senha']);
             header('Location: ../HTML/Login.php'); 
         } else {
-            if ($nivelAcesso === 0) {
+            // Verifique se o email é diferente de 'admin@gmail.com' antes de atualizar o nível de acesso
+            if ($email != 'admin@gmail.com') {
+                // Comando SQL de atualização
+                $updateSql = "UPDATE usuarios SET nivel_acesso = 0 WHERE email = :email";
+                $updateStmt = $conn->prepare($updateSql);
+                $updateStmt->bindParam(':email', $email);
+                $updateStmt->execute();
+            }
+
+            if ($nivelAcesso == 1) {
                 $_SESSION['email'] = $email;
                 $_SESSION['senha'] = $senha;
                 header('Location: ../HTML/PetSpace.php');
@@ -47,6 +56,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
                 header('Location: ../HTML/Adm1.php');
             }
         }
+        
         
 
     } catch (PDOException $e) {

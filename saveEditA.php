@@ -1,6 +1,5 @@
 
-
-<?php
+ <?php
 include_once('dados.php');
 
 if (isset($_POST['update'])) {
@@ -22,6 +21,7 @@ if (isset($_POST['update'])) {
         $conn = new PDO("sqlsrv:Server=$serverName;Database=$databaseName", $uid, $pwd);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+        // Atualize os dados do animal
         $sqlUpdateA = "UPDATE animais SET nome_pet = :nome_pet, sexo = :sexo, idade = :idade, porte = :porte, especie = :especie, raca = :raca WHERE id = :id";
         $stmtA = $conn->prepare($sqlUpdateA);
         $stmtA->bindParam(':nome_pet', $nome_pet);
@@ -33,6 +33,19 @@ if (isset($_POST['update'])) {
         $stmtA->bindParam(':id', $id);
         $stmtA->execute();
 
+        // Verifique se uma nova imagem foi enviada
+        if (isset($_FILES['nova_imagem']) && $_FILES['nova_imagem']['error'] === UPLOAD_ERR_OK) {
+            // Ler o conteúdo da nova imagem em formato binário
+            $nova_imagem_content = file_get_contents($_FILES['nova_imagem']['tmp_name']);
+
+            // Atualize a imagem do animal
+            $sqlUpdateImagem = "UPDATE animais SET imagem = :nova_imagem WHERE id = :id";
+            $stmtImagem = $conn->prepare($sqlUpdateImagem);
+            $stmtImagem->bindParam(':nova_imagem', $nova_imagem_content, PDO::PARAM_LOB, 0, PDO::SQLSRV_ENCODING_BINARY);
+            $stmtImagem->bindParam(':id', $id);
+            $stmtImagem->execute();
+        }
+
         header('Location: ../Repositorio_Pet_Space/HTML/Adm1.php');
         exit;
     } catch (PDOException $e) {
@@ -40,5 +53,4 @@ if (isset($_POST['update'])) {
     }
 }
 ?>
-
 

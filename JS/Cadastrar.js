@@ -124,7 +124,7 @@ cpf.addEventListener('keyup', () => {
 
 
 senha.addEventListener('keyup', () => {
-  if(senha.value.length <= 9){
+  if(senha.value.length <= 7){
     labelSenha.setAttribute('style', 'color: red')
     labelSenha.innerHTML = 'Senha Insira no minimo 8 caracteres'
     senha.setAttribute('style', 'border-color: red')

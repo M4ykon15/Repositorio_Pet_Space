@@ -68,12 +68,12 @@ try {
                    
                     <a class="inbox" href="#">
                     <img style="height: 50px; width: 40px; padding-bottom: 10px;" src="../Imagens/icons8-pessoa-do-sexo-masculino-64.png" />
-                    <button id="btnUsuarios" name="User">Usuários</button>
+                    <button id="btnUsuarios"  name="User">Usuários</button>
 </a>
 
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#"  >
                         <img style="padding-left: 5px;height: 35px; width: 40px;"  src="../Imagens/icons8-ano-do-cão-96.png"/>  
                        <button id="btnAnimais" name="animals">Animais</button>
                      
@@ -101,7 +101,7 @@ try {
     </button>
 </a>
 
-<a href="../HTML/PetSpace.php" style="text-decoration: none; color: #00ff00; ">
+<a href="../HTML/AdmPet.php" style="text-decoration: none; color: #00ff00; ">
 <button class="inicio">
         
         <p id="inicio">Tela inicial</p>
@@ -213,7 +213,7 @@ try {
 
       
 
-<a id="a-cad" href="../HTML/Doar.html">
+<a id="a-cad" href="../HTML/Doar.php">
     <button id="buttonCad" >
     <svg xmlns="http://www.w3.org/2000/svg" id="add" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>

@@ -28,8 +28,8 @@ if (!empty($_GET['id'])) {
             $raca = $row['raca'];
             $idade = $row['idade'];
             $porte = $row['porte'];
-            $porte = $row['porte'];
-            
+            $imagem = $row['imagem']; // Adicione essa linha para recuperar a imagem
+
 
         } else {
             header('Location: ../HTML/Adm1.php');
@@ -90,15 +90,21 @@ if (!empty($_GET['id'])) {
 
 
     <div class="forms" style="margin: 25px 25px 25px 25px; padding-top: 25px;">
-    <form method="POST" action="../saveEditA.php">
+    <form method="POST" action="../saveEditA.php" enctype="multipart/form-data">
 
   
       <label for="nome_pet" style="font-size: 20px;">Nome do Pet:</label>
       <input type="text" id="nome_pet" name="nome_pet" value="<?php echo $nome_pet?>" required><br>
   
-      <label for="sexo" style="font-size: 20px;">Sexo:</label>
-      <input type="text" id="sexo" name="sexo"  value="<?php echo $sexo?>"    style="padding-top: 10px;" required>
-        
+       <label for="sexo" style="font-size: 20px;">Sexo:</label> 
+      <select id="sexo" name="sexo" style="font-size: 15px; padding-top: 10px;" required>
+    <option value="" disabled selected><?php echo $sexo?></option>
+    <option value="Macho">Macho</option>
+    <option value="Fêmea">Fêmea</option>
+</select>
+
+
+
    
       <label for="especie"style="font-size: 20px;">Espécie:</label>
       <input type="text"   id="especie" name="especie"  value="<?php echo $especie?>" required>
@@ -113,20 +119,54 @@ if (!empty($_GET['id'])) {
 
    
       <label for="porte" style="font-size: 20px;">Porte:</label>
-      <input type="text"   id="porte" name="porte" value="<?php echo $porte?>"    required>
-      
+      <select id="porte" name="porte" style="font-size: 16px; padding-top: 10px;" required>
+      <option value="" disabled selected><?php echo $porte ?></option>
+    <option value="Pequeno">Pequeno</option>
+    <option value="Médio">Médio</option>
+    <option value="Grande">Grande</option>
+</select>
    
-      <!-- <label for="imagem" style="font-size: 20px;">Foto do animal:</label><br>
-
-      <img id="imagem" src="#" alt="Foto" style="margin-top: 20px;"></br>
-
-<input type="file" id="foto" name="foto" accept="image/*" onchange="mostrarFoto(event)" style="margin-top: 20px;">
-</br> -->
+     
 
 <div class="custom-file">
         <input type="file" class="custom-file-input" name="imagem" id="imagem">
         <label class="custom-file-label" for="imagem">Escolha um arquivo</label>
       </div>
+
+      <!-- <?php
+       
+        try {
+            // Cria uma nova conexão PDO
+            $query = "SELECT id,
+                      imagem
+                  FROM animais";
+            $stmt = $conn->prepare($query);
+            $stmt->execute();
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            // Loop através dos resultados e exiba os cards com Bootstrap
+            // Defina a largura e a altura desejadas fora do loop
+$imgWidth = 240;
+$imgHeight = 200;
+
+foreach ($results as $row) {
+    echo '<div class="card">';
+    echo '<img src="data:image/jpeg;base64,' . base64_encode($row['imagem']) . '" alt="' . '" class="img-fluid" style="width: ' . $imgWidth . 'px; height: ' . $imgHeight . 'px; margin-top: 10px; border-radius: 20px;">';
+    echo '</div>';
+  }
+} catch (PDOException $e) {
+    echo "Erro na conexão: " . $e->getMessage();
+}
+?> -->
+
+<?php
+            // Exibir a imagem atual do animal, se houver
+            if (!empty($imagem)) {
+                echo '<div class="card">';
+                echo '<img src="data:image/jpeg;base64,' . base64_encode($imagem) . '" alt="Imagem do Animal Atual" class="img-fluid" style="width: ' . $imgWidth . 'px; height: ' . $imgHeight . 'px; margin-top: 10px; border-radius: 20px;">';
+                echo '</div>';
+            }
+            ?>
 
 <div class='justify-center'>
  <input type="hidden" name="id" value="<?php echo $id ?>">

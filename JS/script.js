@@ -14,6 +14,7 @@
             usuariosTxt.style.display = "block"; 
             animaisTxt.style.display = "none"; 
             acad.style.display = "none"; 
+            
         });
 
         btnAnimais.addEventListener("click", () => {
@@ -22,5 +23,6 @@
             animaisTxt.style.display = "block"; 
             usuariosTxt.style.display = "none"
             acad.style.display = "block"
+           
         });
    

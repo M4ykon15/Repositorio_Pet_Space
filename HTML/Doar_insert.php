@@ -38,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Use um parâmetro de saída para a imagem
             $stmt->bindParam(':imagem', $imagem_content, PDO::PARAM_LOB, 0, PDO::SQLSRV_ENCODING_BINARY);
 
+           
             // Executar a declaração preparada
             if ($stmt->execute()) {
                 // Verificar se o registro foi inserido com sucesso

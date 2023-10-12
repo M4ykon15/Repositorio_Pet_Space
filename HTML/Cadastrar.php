@@ -7,7 +7,7 @@ if(isset($_POST['submit'])) {
   $senha = $_POST['senha'];
   $telefone = $_POST['telefone'];
   $cpf = $_POST['cpf'];
-  $nivel = 1;
+  $nivel = 0;
 
     // Defina as configurações da conexão com o banco de dados aqui
     $serverName = "PetSpace.mssql.somee.com";

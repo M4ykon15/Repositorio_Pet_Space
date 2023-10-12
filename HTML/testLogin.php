@@ -46,7 +46,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
                 $updateStmt->execute();
             }
 
-            if ($nivelAcesso == 1) {
+            if ($nivelAcesso == 0) {
                 $_SESSION['email'] = $email;
                 $_SESSION['senha'] = $senha;
                 header('Location: ../HTML/PetSpace.php');

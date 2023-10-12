@@ -126,7 +126,6 @@ try {
             <th scope="col">#</th>
             <th scope="col">Nome</th>
             <th scope="col">Email</th>
-            <th scope="col">Senha</th>
             <th scope="col">Telefone</th>
             <th scope="col">CPF</th>
             <th scope="col">Ações</th>
@@ -139,7 +138,6 @@ try {
             echo "<td>" . $row['id'] . "</td>";
             echo "<td>" . $row['nome'] . "</td>";
             echo "<td>" . $row['email'] . "</td>";
-            echo "<td>" . $row['senha'] . "</td>";
             echo "<td>" . $row['telefone'] . "</td>";
             echo "<td>" . $row['cpf'] . "</td>";
             echo "<td>

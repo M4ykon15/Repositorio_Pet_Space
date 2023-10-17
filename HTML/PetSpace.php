@@ -148,12 +148,12 @@ try {
       </div>
 
 
-      <a href="../HTML/Login.php">
+      <!-- <a href="../HTML/Login.php">
         <button type="button-entrar" class="btn btn-outline-light btn-lg" data-toggle="modal" style="margin-right: 10px;font-size: 15px;" data-target="#Login">Entrar</button>
       </a>
       <a href="../HTML/Cadastrar.php">
         <button type="button-cadastrar" class="btn btn-outline-light btn-lg" data-toggle="modal" style="margin-right: 10px; font-size: 15px;" data-target="#Login">Cadastrar</button>
-      </a>
+      </a> -->
 
 
 
@@ -231,7 +231,8 @@ try {
                       imagem,
                       idade,
                       porte,
-                      especie
+                      especie,
+                      raca
                   FROM animais";
             $stmt = $conn->prepare($query);
             $stmt->execute();
@@ -273,6 +274,7 @@ foreach ($results as $row) {
    
     echo '<strong>Sexo:</strong> ' . $row['sexo'] . '<br>';
     echo '<strong>Espécie:</strong> ' . $row['especie'] . '<br>';
+    echo '<strong>Raça:</strong> ' . $row['raca'] . '<br>';
     echo '<strong>Idade:</strong> ' . $row['idade'] . '<br>';
     echo '<strong>Porte:</strong> ' . $row['porte'] . '<br>';
     // Adicione outras informações aqui, como espécie, raça, porte, idade, etc.
@@ -400,7 +402,7 @@ foreach ($results as $row) {
       <p></p>A Pet Space possui com o intuito de oferecer aos pets um lar e para aquelas pessoas que não possuen
       condições de
       cuidar de algum pet agora criamos um site para ajuda-lo
-      <p></p>Este é um projeto desenvolvido por um grupo de 5 desenvolvedores para ajudar PetSpace e todos aqueles que se comovem com a situação dos animais em
+      <p></p>Este é um projeto desenvolvido por um grupo de 6 desenvolvedores para ajudar PetSpace e todos aqueles que se comovem com a situação dos animais em
       que
       a grande maioria dos animais estão nas ruas abandonados
       <div class="text-xl text-gray-500" style="font-size: 20px;"></div>

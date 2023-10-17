@@ -85,14 +85,16 @@ if (!empty($_GET['id'])) {
       <a href="../HTML/Adm1.php" class="btn" style="color: #000; background-color: #90EE90; margin-right: 25px;">Voltar</a>
     </div>
   </div>
+    
 </nav>
     
 
+<p class="animal" style="font-size: 30px; margin-left: 30px;">Editar Animal</p>
 
-    <div class="forms" style="margin: 25px 25px 25px 25px; padding-top: 25px;">
+    <div class="forms" style="margin: 5px 25px 25px 25px; padding-top: 25px;">
     <form method="POST" action="../saveEditA.php" enctype="multipart/form-data">
 
-  
+   
       <label for="nome_pet" style="font-size: 20px;">Nome do Pet:</label>
       <input type="text" id="nome_pet" name="nome_pet" value="<?php echo $nome_pet?>" required><br>
   
@@ -170,7 +172,7 @@ foreach ($results as $row) {
 
 <div class='justify-center'>
  <input type="hidden" name="id" value="<?php echo $id ?>">
-<button type="submit" class="btn btn-success btn-lg" name="update" id="update"   style="margin-top: 50px;">Enviar</button>
+<button type="submit" class="btn btn-success btn-lg" name="update" id="update"   style="margin-top: 50px;">Salvar</button>
 
     </form>
   

@@ -512,3 +512,10 @@ input[type="submit"]:hover {
     max-width: 150px;
     max-height: 150px;
 }
+
+#sucesso{
+    margin-left: 50px;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: -50px;
+}

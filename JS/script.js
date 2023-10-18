@@ -25,4 +25,4 @@
             acad.style.display = "block"
            
         });
-   
+

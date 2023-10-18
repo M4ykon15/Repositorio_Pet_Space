@@ -51,6 +51,14 @@ require_once "../dados.php";
     </div>
   </nav>
 
+  <?php
+    if (isset($_SESSION['mensagem_sucesso'])) {
+        echo '<div id="sucesso">' . $_SESSION['mensagem_sucesso'] . '</div>';
+        unset($_SESSION['mensagem_sucesso']); // Limpe a mensagem para que ela não seja exibida novamente na atualização da página.
+    }
+?>
+
+
   <div id='msgSuccess'></div>
               <div id='msgError'></div>
 

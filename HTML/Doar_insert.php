@@ -34,18 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bindParam(':raca', $raca, PDO::PARAM_STR);
             $stmt->bindParam(':idade', $idade, PDO::PARAM_STR);
             $stmt->bindParam(':porte', $porte, PDO::PARAM_STR);
-
-            // Use um parâmetro de saída para a imagem
             $stmt->bindParam(':imagem', $imagem_content, PDO::PARAM_LOB, 0, PDO::SQLSRV_ENCODING_BINARY);
 
-           
             // Executar a declaração preparada
             if ($stmt->execute()) {
                 // Verificar se o registro foi inserido com sucesso
                 if ($stmt->rowCount() > 0) {
-                    echo "Registro inserido com sucesso!";
-                    header("Location: Doar.php");
-                    exit();
+                    // Definir a mensagem de sucesso na variável de sessão
+                    $_SESSION['mensagem_sucesso'] = "Cadastro realizado";
                 } else {
                     echo "Erro ao inserir o registro.";
                 }
@@ -64,4 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Erro na conexão: " . $e->getMessage();
     }
 }
+
+header("Location: Doar.php");
+exit();
 ?>
